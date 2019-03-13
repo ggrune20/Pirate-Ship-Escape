@@ -1,8 +1,13 @@
 "Pirate Ship Escape" by ggrune20
 
-Holding Cell is a room. It is south of Cargo Hold. 
+When play begins: 
+say "You are a British sailor who is being held captive on a pirate ship. Tomorrow you are supposed to walk the plank. It is night time and most of the pirates are asleep, this is your only chance to get off of the pirate ship and make it out alive. However, you also know the Captain has treasure he took from you. If you take back your treasure and escape the ship with your life you will be a legend amongst your British sailors. Good luck!"
 
-Cargo Hold is a room. It is north of Holding Cell. 
+Holding Cell is a room.  
+
+The Jail Door is north of Holding Cell and south of Cargo Hold. The Jail Door is a door. The Jail door is lockable and locked. 
+
+Cargo Hold is a room. 
 
 Crew's Quarters is a room. It is north of Cargo Hold. 
 

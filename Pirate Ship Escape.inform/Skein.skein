@@ -9,18 +9,20 @@
 
 Pirate Ship Escape
 An Interactive Fiction by ggrune20
-Release 1 / Serial number 190308 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190312 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Holding Cell
+You can see a Jail Door here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1005"></child>
+        <children><child nodeId="node-1030"></child>
+            <child nodeId="node-1005"></child>
         </children>
     </item>
     <item nodeId="node-1005">
         <command xml:space="preserve">u</command>
-        <result xml:space="preserve">You climb the ladder and get up to the center deck.
+        <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -39,7 +41,8 @@ Cargo Hold
     </item>
     <item nodeId="node-1007">
         <command xml:space="preserve">u</command>
-        <result xml:space="preserve">You climb the ladder and get up to the center deck.
+        <result xml:space="preserve">
+Center Deck
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -48,7 +51,9 @@ Cargo Hold
     </item>
     <item nodeId="node-1014">
         <command xml:space="preserve">w</command>
-        <result xml:space="preserve">You can't go that way.
+        <result xml:space="preserve">
+Port Deck
+You can see a Dinghy Boat here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -57,7 +62,53 @@ Cargo Hold
     </item>
     <item nodeId="node-1015">
         <command xml:space="preserve">take boat</command>
-        <result xml:space="preserve">You can't see any such thing.
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1026"></child>
+        </children>
+    </item>
+    <item nodeId="node-1026">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1027"></child>
+        </children>
+    </item>
+    <item nodeId="node-1027">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Cargo Hold
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1028"></child>
+        </children>
+    </item>
+    <item nodeId="node-1028">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1029"></child>
+        </children>
+    </item>
+    <item nodeId="node-1029">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1030">
+        <command xml:space="preserve">take jail door</command>
+        <result xml:space="preserve">That's fixed in place.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

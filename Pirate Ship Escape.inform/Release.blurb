@@ -1,18 +1,18 @@
 ! Blurb file created by Inform build 6M62
 
-status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/ggrune20/Desktop/Pirate Ship Escape.inform/Build/StatusCblorb.html"
+status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/ggrune20/Documents/GitHub/Pirate-Ship-Escape/Pirate Ship Escape.inform/Build/StatusCblorb.html"
 
 
 ! Identification
 
-project folder "/Users/ggrune20/Desktop/Pirate Ship Escape.inform"
-release to "/Users/ggrune20/Desktop/Pirate Ship Escape.materials/Release"
+project folder "/Users/ggrune20/Documents/GitHub/Pirate-Ship-Escape/Pirate Ship Escape.inform"
+release to "/Users/ggrune20/Documents/GitHub/Pirate-Ship-Escape/Pirate Ship Escape.materials/Release"
 
 ! Blorb instructions
 
 storyfile leafname "Pirate Ship Escape.gblorb"
-storyfile "/Users/ggrune20/Desktop/Pirate Ship Escape.inform/Build/output.ulx" include
-ifiction "/Users/ggrune20/Desktop/Pirate Ship Escape.inform/Metadata.iFiction" include
+storyfile "/Users/ggrune20/Documents/GitHub/Pirate-Ship-Escape/Pirate Ship Escape.inform/Build/output.ulx" include
+ifiction "/Users/ggrune20/Documents/GitHub/Pirate-Ship-Escape/Pirate Ship Escape.inform/Metadata.iFiction" include
 cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 
