@@ -7,6 +7,16 @@ Holding Cell is a room.
 
 The Jail Door is north of Holding Cell and south of Cargo Hold. The Jail Door is a door. The Jail door is lockable and locked. 
 
+[a section of the jail door is rusty and loose. you need to pry it open.]
+
+loose floorboard is an object. It is in Holding Cell. 
+
+Understand "pry [something] with [something]" as prying it with. prying it with is an action applying to two things. 
+
+Instead of prying the jail door with loose floorboard:
+	say "you break open the jail door.";
+	now the jail door is open. 
+
 Cargo Hold is a room. 
 
 Crew's Quarters is a room. It is north of Cargo Hold. 
