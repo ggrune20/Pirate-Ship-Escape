@@ -5,11 +5,15 @@ say "You are a British sailor who is being held captive on a pirate ship. Tomorr
 
 Holding Cell is a room.  
 
+[first puzzle- breaking out of jail cell]
+
 The Jail Door is north of Holding Cell and south of Cargo Hold. The Jail Door is a door. The Jail door is lockable and locked. 
 
 [a section of the jail door is rusty and loose. you need to pry it open.]
 
 loose floorboard is an object. It is in Holding Cell. 
+
+[you need to break off the loose floorboard]
 
 Understand "pry [something] with [something]" as prying it with. prying it with is an action applying to two things. 
 
@@ -30,6 +34,15 @@ Starboard Deck is a room. It is east of Center Deck.
 Port Deck is a room. It is west of Center Deck. 
 
 Bow of the Ship is a room. It is north of Center Deck. 
+
+Seamus is a man in Bow of the Ship. 
+
+[third puzzle- assembling and lowering dinghy boat into the water so that you can row away.]
+
+understand "cut [something] with [something]" as cutting it with. 
+cutting it with is an action applying to two things. 
+
+[player needs to find a knife to cut the rope so the dinghy boat falls into the water.]
 
 The Dinghy Boat is a object. It is in Port Deck. 
 

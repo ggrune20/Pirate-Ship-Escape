@@ -758,7 +758,7 @@ Constant life = NULL;
 ! Definitions.i6t: Action Count
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant ActionCount = 78;
+Constant ActionCount = 79;
 
 
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
@@ -4402,7 +4402,7 @@ Global lightflag = false;
 ! ListWriter.i6t: Memory
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant REQUISITION_STACK_SIZE = 3*24;
+Constant REQUISITION_STACK_SIZE = 3*25;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -9943,7 +9943,7 @@ Array valued_property_offsets --> valued_property_offsets_SIZE;
 ! Output.i6t: Activities
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant NUMBER_RULEBOOKS_CREATED = 365;
+Constant NUMBER_RULEBOOKS_CREATED = 368;
 Constant V0_printing_the_name = 0;
 Constant V1_printing_the_plural_name = 1;
 Constant V2_printing_a_number = 2;
@@ -10553,7 +10553,7 @@ Constant IK6_First = nothing;
 Constant IK7_First = nothing;
 Constant IK8_First = selfobj;
 Constant IK9_First = nothing;
-Constant IK10_First = nothing;
+Constant IK10_First = I135_seamus;
 Constant IK11_First = nothing;
 Constant IK12_First = nothing;
 Constant IK13_First = nothing;
@@ -11035,7 +11035,7 @@ Object selfobj ""
     with IK2_Count 0
     with IK2_Link I128_loose_floorboard
     with IK8_Count 0
-    with IK8_Link nothing
+    with IK8_Link I135_seamus
     with KD_Count 8
     with parse_name Parse_Name_GV13
     with action_bitmap 0 0 0 0 0 
@@ -11102,7 +11102,7 @@ Object I126_jail_door ""
     with found_in I125_holding_cell I127_cargo_hold
     has mark_as_thing
     with IK2_Count 1
-    with IK2_Link I135_dinghy_boat
+    with IK2_Link I136_dinghy_boat
     with IK4_Count 0
     with IK4_Link nothing
     with KD_Count 4
@@ -11217,13 +11217,13 @@ Object I133_port_deck ""
     with article BC_195
 ;
 
-Object -> I135_dinghy_boat ""
+Object -> I136_dinghy_boat ""
     class K2_thing
     with short_name BC_196
     with vector 0
     has mark_as_thing
-    with IK2_Count 3
-    with IK2_Link nothing
+    with IK2_Count 4
+    with IK2_Link I135_seamus
     with KD_Count 2
     with name 'dinghy' 'boat' 'things//p' 
     with action_bitmap 0 0 0 0 0 
@@ -11249,6 +11249,28 @@ Object I134_bow_of_the_ship ""
     with list_together BC_204
     with plural BC_205
     with article BC_206
+;
+
+Object -> I135_seamus ""
+    class K10_man
+    with short_name BC_207
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 3
+    with IK2_Link nothing
+    with IK8_Count 1
+    with IK8_Link nothing
+    with IK10_Count 0
+    with IK10_Link nothing
+    with KD_Count 10
+    with name 'seamus' 'men//p' 
+    with action_bitmap 0 0 0 0 0 
+    with description BC_208
+    with initial BC_209
+    with list_together BC_210
+    with plural BC_211
+    with article BC_212
 ;
 
 Constant I71_german_language = 1;
@@ -11302,12 +11324,12 @@ Constant I123_masculine_gender = 2;
 Constant I124_feminine_gender = 3;
 Array Global_Vars -->
   (false) ! 7 darkness witnessed
-  (BC_207) ! 25 command prompt
+  (BC_213) ! 25 command prompt
   (I73_english_language) ! 29 language of play
-  (BC_208) ! 32 story author
-  (BC_209) ! 33 story headline
-  (BC_210) ! 34 story genre
-  (BC_211) ! 35 story description
+  (BC_214) ! 32 story author
+  (BC_215) ! 33 story headline
+  (BC_216) ! 34 story genre
+  (BC_217) ! 35 story description
   (1) ! 36 release number
   (0) ! 37 story creation year
   (0) ! 45 locale paragraph count
@@ -11322,14 +11344,14 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0664 0 (BC_212) (BC_213) (BC_214) (BC_215) (BC_216) ;
+Array tab_0_0 table $0664 0 (BC_218) (BC_219) (BC_220) (BC_221) (BC_222) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
 Array tab_0_2 table $2066 2 (Consult_Grammar_94) (Consult_Grammar_95) (Consult_Grammar_96) (Consult_Grammar_97) (Consult_Grammar_98) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4 ( TABLE_NOVALUE) ( TABLE_NOVALUE) (V27_amusing_a_victorious_pla) ( TABLE_NOVALUE) ( TABLE_NOVALUE) ;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -11339,7 +11361,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $1f  ! Column 1
+  $3f  ! Column 1
   
   ! End of table
   NULL NULL;
@@ -11455,8 +11477,9 @@ Array ActionData table
   ##NotifyOff  $$00100000  OBJECT_TY OBJECT_TY  0 20075
   ##Pronouns  $$00100000  OBJECT_TY OBJECT_TY  0 20076
   ##A77_prying_it_with  $$00011011  OBJECT_TY OBJECT_TY  0 20077
+  ##A78_cutting_it_with  $$00011011  OBJECT_TY OBJECT_TY  0 20078
 ;
-Constant AD_RECORDS = 78;
+Constant AD_RECORDS = 79;
 [ ANSTVC_7 
     pos ! Implied call parameter
     state ! Implied call parameter
@@ -11600,6 +11623,7 @@ Constant AD_RECORDS = 78;
         ##NotifyOff: print "switching score notification off"; 
         ##Pronouns: print "requesting the pronoun meanings"; 
         ##A77_prying_it_with: print "prying"; print " "; if (for_say == 2) print "it"; else DA_Name(n); print " "; print "with"; if (for_say ~= 2) { print " "; DA_Name(s); }
+        ##A78_cutting_it_with: print "cutting"; print " "; if (for_say == 2) print "it"; else DA_Name(n); print " "; print "with"; if (for_say ~= 2) { print " "; DA_Name(s); }
     }
 ];
 
@@ -11613,7 +11637,7 @@ Array ActionCoding -->
     ##Listen ##Taste ##Cut ##Jump ##Tie ##Drink ##Sorry ##Swing
     ##Rub ##SetTo ##WaveHands ##Buy ##Climb ##Sleep ##Quit ##Save
     ##Restore ##Restart ##Verify ##ScriptOn ##ScriptOff ##Version ##Score ##LMode3
-    ##LMode2 ##LMode1 ##NotifyOn ##NotifyOff ##Pronouns ##A77_prying_it_with;
+    ##LMode2 ##LMode1 ##NotifyOn ##NotifyOff ##Pronouns ##A77_prying_it_with ##A78_cutting_it_with;
 
 
 Array ActionHappened --> 0 0 0 0 0;
@@ -11852,6 +11876,9 @@ Array ActionHappened --> 0 0 0 0 0;
 ];
 [ A77_prying_it_withSub ;
     return GenericVerbSub(362,363,364);
+];
+[ A78_cutting_it_withSub ;
+    return GenericVerbSub(365,366,367);
 ];
 
 [ MistakeActionSub ;
@@ -21221,7 +21248,7 @@ Array TimedEventTimesTable table 0 0;
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
 
-Array rulebooks_array --> B0_startup B1_turn_sequence B2_shutdown B3_scene_changing B4_when_play_begins B5_when_play_ends B6_when_scene_begins B7_when_scene_ends B8_every_turn B9_action_processing B10_setting_action_variables B11_specific_action_processi B12_player_s_action_awarenes B13_accessibility B14_reaching_inside B15_reaching_outside B16_visibility B17_persuasion B18_unsuccessful_attempt_by B19_before B20_instead B21_check B22_carry_out B23_after B24_report B25_does_the_player_mean B26_multiple_action_processi B27_when_entire_game_begins B28_when_entire_game_ends B29_before_printing_the_name B30_for_printing_the_name B31_after_printing_the_name B32_before_printing_the_plur B33_for_printing_the_plural_ B34_after_printing_the_plura B35_before_printing_a_number B36_for_printing_a_number B37_after_printing_a_number B38_before_printing_room_des B39_for_printing_room_descri B40_after_printing_room_desc B41_before_printing_inventor B42_for_printing_inventory_d B43_after_printing_inventory B44_before_listing_contents B45_for_listing_contents B46_after_listing_contents B47_before_grouping_together B48_for_grouping_together B49_after_grouping_together B50_before_writing_a_paragra B51_for_writing_a_paragraph_ B52_after_writing_a_paragrap B53_before_listing_nondescri B54_for_listing_nondescript_ B55_after_listing_nondescrip B56_before_printing_the_name B57_for_printing_the_name_of B58_after_printing_the_name_ B59_before_printing_the_desc B60_for_printing_the_descrip B61_after_printing_the_descr B62_before_printing_the_anno B63_for_printing_the_announc B64_after_printing_the_annou B65_before_printing_the_anno B66_for_printing_the_announc B67_after_printing_the_annou B68_before_printing_a_refusa B69_for_printing_a_refusal_t B70_after_printing_a_refusal B71_before_constructing_the_ B72_for_constructing_the_sta B73_after_constructing_the_s B74_before_printing_the_bann B75_for_printing_the_banner_ B76_after_printing_the_banne B77_before_reading_a_command B78_for_reading_a_command B79_after_reading_a_command B80_before_deciding_the_scop B81_for_deciding_the_scope B82_after_deciding_the_scope B83_before_deciding_the_conc B84_for_deciding_the_conceal B85_after_deciding_the_conce B86_before_deciding_whether_ B87_for_deciding_whether_all B88_after_deciding_whether_a B89_before_clarifying_the_pa B90_for_clarifying_the_parse B91_after_clarifying_the_par B92_before_asking_which_do_y B93_for_asking_which_do_you_ B94_after_asking_which_do_yo B95_before_printing_a_parser B96_for_printing_a_parser_er B97_after_printing_a_parser_ B98_before_supplying_a_missi B99_for_supplying_a_missing_ B100_after_supplying_a_missi B101_before_supplying_a_miss B102_for_supplying_a_missing B103_after_supplying_a_missi B104_before_implicitly_takin B105_for_implicitly_taking B106_after_implicitly_taking B107_before_starting_the_vir B108_for_starting_the_virtua B109_after_starting_the_virt B110_before_amusing_a_victor B111_for_amusing_a_victoriou B112_after_amusing_a_victori B113_before_printing_the_pla B114_for_printing_the_player B115_after_printing_the_play B116_before_handling_the_fin B117_for_handling_the_final_ B118_after_handling_the_fina B119_before_printing_the_loc B120_for_printing_the_locale B121_after_printing_the_loca B122_before_choosing_notable B123_for_choosing_notable_lo B124_after_choosing_notable_ B125_before_printing_a_local B126_for_printing_a_locale_p B127_after_printing_a_locale B128_before_issuing_the_resp B129_for_issuing_the_respons B130_after_issuing_the_respo B131_check_taking_inventory B132_carry_out_taking_invent B133_report_taking_inventory B134_check_taking B135_carry_out_taking B136_report_taking B137_check_removing_it_from B138_carry_out_removing_it_f B139_report_removing_it_from B140_check_dropping B141_carry_out_dropping B142_report_dropping B143_check_putting_it_on B144_carry_out_putting_it_on B145_report_putting_it_on B146_check_inserting_it_into B147_carry_out_inserting_it_ B148_report_inserting_it_int B149_check_eating B150_carry_out_eating B151_report_eating B152_check_going B153_carry_out_going B154_report_going B155_check_entering B156_carry_out_entering B157_report_entering B158_check_exiting B159_carry_out_exiting B160_report_exiting B161_check_getting_off B162_carry_out_getting_off B163_report_getting_off B164_check_looking B165_carry_out_looking B166_report_looking B167_check_examining B168_carry_out_examining B169_report_examining B170_check_looking_under B171_carry_out_looking_under B172_report_looking_under B173_check_searching B174_carry_out_searching B175_report_searching B176_check_consulting_it_abo B177_carry_out_consulting_it B178_report_consulting_it_ab B179_check_locking_it_with B180_carry_out_locking_it_wi B181_report_locking_it_with B182_check_unlocking_it_with B183_carry_out_unlocking_it_ B184_report_unlocking_it_wit B185_check_switching_on B186_carry_out_switching_on B187_report_switching_on B188_check_switching_off B189_carry_out_switching_off B190_report_switching_off B191_check_opening B192_carry_out_opening B193_report_opening B194_check_closing B195_carry_out_closing B196_report_closing B197_check_wearing B198_carry_out_wearing B199_report_wearing B200_check_taking_off B201_carry_out_taking_off B202_report_taking_off B203_check_giving_it_to B204_carry_out_giving_it_to B205_report_giving_it_to B206_check_showing_it_to B207_carry_out_showing_it_to B208_report_showing_it_to B209_check_waking B210_carry_out_waking B211_report_waking B212_check_throwing_it_at B213_carry_out_throwing_it_a B214_report_throwing_it_at B215_check_attacking B216_carry_out_attacking B217_report_attacking B218_check_kissing B219_carry_out_kissing B220_report_kissing B221_check_answering_it_that B222_carry_out_answering_it_ B223_report_answering_it_tha B224_check_telling_it_about B225_carry_out_telling_it_ab B226_report_telling_it_about B227_check_asking_it_about B228_carry_out_asking_it_abo B229_report_asking_it_about B230_check_asking_it_for B231_carry_out_asking_it_for B232_report_asking_it_for B233_check_waiting B234_carry_out_waiting B235_report_waiting B236_check_touching B237_carry_out_touching B238_report_touching B239_check_waving B240_carry_out_waving B241_report_waving B242_check_pulling B243_carry_out_pulling B244_report_pulling B245_check_pushing B246_carry_out_pushing B247_report_pushing B248_check_turning B249_carry_out_turning B250_report_turning B251_check_pushing_it_to B252_carry_out_pushing_it_to B253_report_pushing_it_to B254_check_squeezing B255_carry_out_squeezing B256_report_squeezing B257_check_saying_yes B258_carry_out_saying_yes B259_report_saying_yes B260_check_saying_no B261_carry_out_saying_no B262_report_saying_no B263_check_burning B264_carry_out_burning B265_report_burning B266_check_waking_up B267_carry_out_waking_up B268_report_waking_up B269_check_thinking B270_carry_out_thinking B271_report_thinking B272_check_smelling B273_carry_out_smelling B274_report_smelling B275_check_listening_to B276_carry_out_listening_to B277_report_listening_to B278_check_tasting B279_carry_out_tasting B280_report_tasting B281_check_cutting B282_carry_out_cutting B283_report_cutting B284_check_jumping B285_carry_out_jumping B286_report_jumping B287_check_tying_it_to B288_carry_out_tying_it_to B289_report_tying_it_to B290_check_drinking B291_carry_out_drinking B292_report_drinking B293_check_saying_sorry B294_carry_out_saying_sorry B295_report_saying_sorry B296_check_swinging B297_carry_out_swinging B298_report_swinging B299_check_rubbing B300_carry_out_rubbing B301_report_rubbing B302_check_setting_it_to B303_carry_out_setting_it_to B304_report_setting_it_to B305_check_waving_hands B306_carry_out_waving_hands B307_report_waving_hands B308_check_buying B309_carry_out_buying B310_report_buying B311_check_climbing B312_carry_out_climbing B313_report_climbing B314_check_sleeping B315_carry_out_sleeping B316_report_sleeping B317_check_quitting_the_game B318_carry_out_quitting_the_ B319_report_quitting_the_gam B320_check_saving_the_game B321_carry_out_saving_the_ga B322_report_saving_the_game B323_check_restoring_the_gam B324_carry_out_restoring_the B325_report_restoring_the_ga B326_check_restarting_the_ga B327_carry_out_restarting_th B328_report_restarting_the_g B329_check_verifying_the_sto B330_carry_out_verifying_the B331_report_verifying_the_st B332_check_switching_the_sto B333_carry_out_switching_the B334_report_switching_the_st B335_check_switching_the_sto B336_carry_out_switching_the B337_report_switching_the_st B338_check_requesting_the_st B339_carry_out_requesting_th B340_report_requesting_the_s B341_check_requesting_the_sc B342_carry_out_requesting_th B343_report_requesting_the_s B344_check_preferring_abbrev B345_carry_out_preferring_ab B346_report_preferring_abbre B347_check_preferring_unabbr B348_carry_out_preferring_un B349_report_preferring_unabb B350_check_preferring_someti B351_carry_out_preferring_so B352_report_preferring_somet B353_check_switching_score_n B354_carry_out_switching_sco B355_report_switching_score_ B356_check_switching_score_n B357_carry_out_switching_sco B358_report_switching_score_ B359_check_requesting_the_pr B360_carry_out_requesting_th B361_report_requesting_the_p B362_check_prying_it_with B363_carry_out_prying_it_wit B364_report_prying_it_with 0;
+Array rulebooks_array --> B0_startup B1_turn_sequence B2_shutdown B3_scene_changing B4_when_play_begins B5_when_play_ends B6_when_scene_begins B7_when_scene_ends B8_every_turn B9_action_processing B10_setting_action_variables B11_specific_action_processi B12_player_s_action_awarenes B13_accessibility B14_reaching_inside B15_reaching_outside B16_visibility B17_persuasion B18_unsuccessful_attempt_by B19_before B20_instead B21_check B22_carry_out B23_after B24_report B25_does_the_player_mean B26_multiple_action_processi B27_when_entire_game_begins B28_when_entire_game_ends B29_before_printing_the_name B30_for_printing_the_name B31_after_printing_the_name B32_before_printing_the_plur B33_for_printing_the_plural_ B34_after_printing_the_plura B35_before_printing_a_number B36_for_printing_a_number B37_after_printing_a_number B38_before_printing_room_des B39_for_printing_room_descri B40_after_printing_room_desc B41_before_printing_inventor B42_for_printing_inventory_d B43_after_printing_inventory B44_before_listing_contents B45_for_listing_contents B46_after_listing_contents B47_before_grouping_together B48_for_grouping_together B49_after_grouping_together B50_before_writing_a_paragra B51_for_writing_a_paragraph_ B52_after_writing_a_paragrap B53_before_listing_nondescri B54_for_listing_nondescript_ B55_after_listing_nondescrip B56_before_printing_the_name B57_for_printing_the_name_of B58_after_printing_the_name_ B59_before_printing_the_desc B60_for_printing_the_descrip B61_after_printing_the_descr B62_before_printing_the_anno B63_for_printing_the_announc B64_after_printing_the_annou B65_before_printing_the_anno B66_for_printing_the_announc B67_after_printing_the_annou B68_before_printing_a_refusa B69_for_printing_a_refusal_t B70_after_printing_a_refusal B71_before_constructing_the_ B72_for_constructing_the_sta B73_after_constructing_the_s B74_before_printing_the_bann B75_for_printing_the_banner_ B76_after_printing_the_banne B77_before_reading_a_command B78_for_reading_a_command B79_after_reading_a_command B80_before_deciding_the_scop B81_for_deciding_the_scope B82_after_deciding_the_scope B83_before_deciding_the_conc B84_for_deciding_the_conceal B85_after_deciding_the_conce B86_before_deciding_whether_ B87_for_deciding_whether_all B88_after_deciding_whether_a B89_before_clarifying_the_pa B90_for_clarifying_the_parse B91_after_clarifying_the_par B92_before_asking_which_do_y B93_for_asking_which_do_you_ B94_after_asking_which_do_yo B95_before_printing_a_parser B96_for_printing_a_parser_er B97_after_printing_a_parser_ B98_before_supplying_a_missi B99_for_supplying_a_missing_ B100_after_supplying_a_missi B101_before_supplying_a_miss B102_for_supplying_a_missing B103_after_supplying_a_missi B104_before_implicitly_takin B105_for_implicitly_taking B106_after_implicitly_taking B107_before_starting_the_vir B108_for_starting_the_virtua B109_after_starting_the_virt B110_before_amusing_a_victor B111_for_amusing_a_victoriou B112_after_amusing_a_victori B113_before_printing_the_pla B114_for_printing_the_player B115_after_printing_the_play B116_before_handling_the_fin B117_for_handling_the_final_ B118_after_handling_the_fina B119_before_printing_the_loc B120_for_printing_the_locale B121_after_printing_the_loca B122_before_choosing_notable B123_for_choosing_notable_lo B124_after_choosing_notable_ B125_before_printing_a_local B126_for_printing_a_locale_p B127_after_printing_a_locale B128_before_issuing_the_resp B129_for_issuing_the_respons B130_after_issuing_the_respo B131_check_taking_inventory B132_carry_out_taking_invent B133_report_taking_inventory B134_check_taking B135_carry_out_taking B136_report_taking B137_check_removing_it_from B138_carry_out_removing_it_f B139_report_removing_it_from B140_check_dropping B141_carry_out_dropping B142_report_dropping B143_check_putting_it_on B144_carry_out_putting_it_on B145_report_putting_it_on B146_check_inserting_it_into B147_carry_out_inserting_it_ B148_report_inserting_it_int B149_check_eating B150_carry_out_eating B151_report_eating B152_check_going B153_carry_out_going B154_report_going B155_check_entering B156_carry_out_entering B157_report_entering B158_check_exiting B159_carry_out_exiting B160_report_exiting B161_check_getting_off B162_carry_out_getting_off B163_report_getting_off B164_check_looking B165_carry_out_looking B166_report_looking B167_check_examining B168_carry_out_examining B169_report_examining B170_check_looking_under B171_carry_out_looking_under B172_report_looking_under B173_check_searching B174_carry_out_searching B175_report_searching B176_check_consulting_it_abo B177_carry_out_consulting_it B178_report_consulting_it_ab B179_check_locking_it_with B180_carry_out_locking_it_wi B181_report_locking_it_with B182_check_unlocking_it_with B183_carry_out_unlocking_it_ B184_report_unlocking_it_wit B185_check_switching_on B186_carry_out_switching_on B187_report_switching_on B188_check_switching_off B189_carry_out_switching_off B190_report_switching_off B191_check_opening B192_carry_out_opening B193_report_opening B194_check_closing B195_carry_out_closing B196_report_closing B197_check_wearing B198_carry_out_wearing B199_report_wearing B200_check_taking_off B201_carry_out_taking_off B202_report_taking_off B203_check_giving_it_to B204_carry_out_giving_it_to B205_report_giving_it_to B206_check_showing_it_to B207_carry_out_showing_it_to B208_report_showing_it_to B209_check_waking B210_carry_out_waking B211_report_waking B212_check_throwing_it_at B213_carry_out_throwing_it_a B214_report_throwing_it_at B215_check_attacking B216_carry_out_attacking B217_report_attacking B218_check_kissing B219_carry_out_kissing B220_report_kissing B221_check_answering_it_that B222_carry_out_answering_it_ B223_report_answering_it_tha B224_check_telling_it_about B225_carry_out_telling_it_ab B226_report_telling_it_about B227_check_asking_it_about B228_carry_out_asking_it_abo B229_report_asking_it_about B230_check_asking_it_for B231_carry_out_asking_it_for B232_report_asking_it_for B233_check_waiting B234_carry_out_waiting B235_report_waiting B236_check_touching B237_carry_out_touching B238_report_touching B239_check_waving B240_carry_out_waving B241_report_waving B242_check_pulling B243_carry_out_pulling B244_report_pulling B245_check_pushing B246_carry_out_pushing B247_report_pushing B248_check_turning B249_carry_out_turning B250_report_turning B251_check_pushing_it_to B252_carry_out_pushing_it_to B253_report_pushing_it_to B254_check_squeezing B255_carry_out_squeezing B256_report_squeezing B257_check_saying_yes B258_carry_out_saying_yes B259_report_saying_yes B260_check_saying_no B261_carry_out_saying_no B262_report_saying_no B263_check_burning B264_carry_out_burning B265_report_burning B266_check_waking_up B267_carry_out_waking_up B268_report_waking_up B269_check_thinking B270_carry_out_thinking B271_report_thinking B272_check_smelling B273_carry_out_smelling B274_report_smelling B275_check_listening_to B276_carry_out_listening_to B277_report_listening_to B278_check_tasting B279_carry_out_tasting B280_report_tasting B281_check_cutting B282_carry_out_cutting B283_report_cutting B284_check_jumping B285_carry_out_jumping B286_report_jumping B287_check_tying_it_to B288_carry_out_tying_it_to B289_report_tying_it_to B290_check_drinking B291_carry_out_drinking B292_report_drinking B293_check_saying_sorry B294_carry_out_saying_sorry B295_report_saying_sorry B296_check_swinging B297_carry_out_swinging B298_report_swinging B299_check_rubbing B300_carry_out_rubbing B301_report_rubbing B302_check_setting_it_to B303_carry_out_setting_it_to B304_report_setting_it_to B305_check_waving_hands B306_carry_out_waving_hands B307_report_waving_hands B308_check_buying B309_carry_out_buying B310_report_buying B311_check_climbing B312_carry_out_climbing B313_report_climbing B314_check_sleeping B315_carry_out_sleeping B316_report_sleeping B317_check_quitting_the_game B318_carry_out_quitting_the_ B319_report_quitting_the_gam B320_check_saving_the_game B321_carry_out_saving_the_ga B322_report_saving_the_game B323_check_restoring_the_gam B324_carry_out_restoring_the B325_report_restoring_the_ga B326_check_restarting_the_ga B327_carry_out_restarting_th B328_report_restarting_the_g B329_check_verifying_the_sto B330_carry_out_verifying_the B331_report_verifying_the_st B332_check_switching_the_sto B333_carry_out_switching_the B334_report_switching_the_st B335_check_switching_the_sto B336_carry_out_switching_the B337_report_switching_the_st B338_check_requesting_the_st B339_carry_out_requesting_th B340_report_requesting_the_s B341_check_requesting_the_sc B342_carry_out_requesting_th B343_report_requesting_the_s B344_check_preferring_abbrev B345_carry_out_preferring_ab B346_report_preferring_abbre B347_check_preferring_unabbr B348_carry_out_preferring_un B349_report_preferring_unabb B350_check_preferring_someti B351_carry_out_preferring_so B352_report_preferring_somet B353_check_switching_score_n B354_carry_out_switching_sco B355_report_switching_score_ B356_check_switching_score_n B357_carry_out_switching_sco B358_report_switching_score_ B359_check_requesting_the_pr B360_carry_out_requesting_th B361_report_requesting_the_p B362_check_prying_it_with B363_carry_out_prying_it_wit B364_report_prying_it_with B365_check_cutting_it_with B366_carry_out_cutting_it_wi B367_report_cutting_it_with 0;
 
 [ EMPTY_RULEBOOK 
     forbid_breaks ! Implied call parameter
@@ -25016,6 +25043,9 @@ Constant B361_report_requesting_the_p = EMPTY_RULEBOOK;
 Constant B362_check_prying_it_with = EMPTY_RULEBOOK;
 Constant B363_carry_out_prying_it_wit = EMPTY_RULEBOOK;
 Constant B364_report_prying_it_with = EMPTY_RULEBOOK;
+Constant B365_check_cutting_it_with = EMPTY_RULEBOOK;
+Constant B366_carry_out_cutting_it_wi = EMPTY_RULEBOOK;
+Constant B367_report_cutting_it_with = EMPTY_RULEBOOK;
 
 
 
@@ -26453,7 +26483,7 @@ Global MStack_Frame_Extent = 0;
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
 #IFNDEF MEMORY_ECONOMY;
-Array rulebook_var_creators --> 0 0 0 0 0 0 0 0 0 RBSTVC_9 0 RBSTVC_11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+Array rulebook_var_creators --> 0 0 0 0 0 0 0 0 0 RBSTVC_9 0 RBSTVC_11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #endif;
 [  RBSTVC_9 
     pos ! Implied call parameter
@@ -28179,7 +28209,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ! Relations.i6t: Relation Route-Finding
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant MAX_ROUTE_LENGTH = 24 + 32;
+Constant MAX_ROUTE_LENGTH = 25 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -29334,6 +29364,9 @@ Array RulebookNames -->
     "check prying it with rulebook" ! 362
     "carry out prying it with rulebook" ! 363
     "report prying it with rulebook" ! 364
+    "check cutting it with rulebook" ! 365
+    "carry out cutting it with rulebook" ! 366
+    "report cutting it with rulebook" ! 367
 ;
 
 
@@ -48884,6 +48917,7 @@ Verb 'drink' 'swallow' 'sip'
 ;
 Verb 'cut' 'slice' 'prune' 'chop'
     * noun  -> Cut
+    * noun 'with' noun  -> A78_cutting_it_with
 ;
 Verb 'jump' 'skip' 'hop'
     *  -> Jump
@@ -48986,7 +49020,7 @@ Verb 'pry'
 
 
 
-Constant TX_PS_46 = ">";
+Constant TX_PS_47 = ">";
 Constant TX_PS_3 = "An Interactive Fiction";
 Constant TX_PS_32 = "As good-looking as ever.";
 Constant TX_PS_45 = "Bow of the Ship";
@@ -48995,17 +49029,18 @@ Constant TX_PS_38 = "Cargo Hold";
 Constant TX_PS_41 = "Center Deck";
 Constant TX_PS_39 = "Crew's Quarters";
 Constant TX_PS_44 = "Dinghy Boat";
-Constant TX_PS_47 = "Fiction";
+Constant TX_PS_48 = "Fiction";
 Constant TX_PS_34 = "Holding Cell";
 Constant TX_PS_37 = "Jail Door";
 Constant TX_PS_36 = "Loose floorboard";
 Constant TX_PS_2 = "Pirate Ship Escape";
 Constant TX_PS_43 = "Port Deck";
-Constant TX_PS_51 = "QUIT";
-Constant TX_PS_48 = "RESTART";
-Constant TX_PS_49 = "RESTORE a saved game";
+Constant TX_PS_52 = "QUIT";
+Constant TX_PS_49 = "RESTART";
+Constant TX_PS_50 = "RESTORE a saved game";
+Constant TX_PS_46 = "Seamus";
 Constant TX_PS_42 = "Starboard Deck";
-Constant TX_PS_52 = "UNDO the last command";
+Constant TX_PS_53 = "UNDO the last command";
 Constant TX_PS_33 = "Yourself";
 Constant TX_PS_9 = "animals";
 Constant TX_PS_14 = "backdrops";
@@ -49026,7 +49061,7 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_50 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_51 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
 Constant TX_PS_24 = "southwest";
@@ -56399,15 +56434,21 @@ Array BC_204 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_205 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_206 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_207 --> PACKED_TEXT_STORAGE TX_PS_46;
-Array BC_208 --> PACKED_TEXT_STORAGE TX_PS_4;
-Array BC_209 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_210 --> PACKED_TEXT_STORAGE TX_PS_47;
-Array BC_211 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_212 --> PACKED_TEXT_STORAGE TX_PS_48;
-Array BC_213 --> PACKED_TEXT_STORAGE TX_PS_49;
-Array BC_214 --> PACKED_TEXT_STORAGE TX_PS_50;
-Array BC_215 --> PACKED_TEXT_STORAGE TX_PS_51;
-Array BC_216 --> PACKED_TEXT_STORAGE TX_PS_52;
+Array BC_208 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_209 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_210 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_211 --> PACKED_TEXT_STORAGE TX_PS_7;
+Array BC_212 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_213 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_214 --> PACKED_TEXT_STORAGE TX_PS_4;
+Array BC_215 --> PACKED_TEXT_STORAGE TX_PS_3;
+Array BC_216 --> PACKED_TEXT_STORAGE TX_PS_48;
+Array BC_217 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_218 --> PACKED_TEXT_STORAGE TX_PS_49;
+Array BC_219 --> PACKED_TEXT_STORAGE TX_PS_50;
+Array BC_220 --> PACKED_TEXT_STORAGE TX_PS_51;
+Array BC_221 --> PACKED_TEXT_STORAGE TX_PS_52;
+Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_53;
 
 
 
