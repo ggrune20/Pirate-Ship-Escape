@@ -18,7 +18,7 @@ loose floorboard is an object. It is in Holding Cell.
 Understand "pry [something] with [something]" as prying it with. prying it with is an action applying to two things. 
 
 Instead of prying the jail door with loose floorboard:
-	say "you break open the jail door.";
+	say "you break open the jail door. North towards the cargo hold is the only way you can go.";
 	now the jail door is open. 
 
 Cargo Hold is a room. 
@@ -26,6 +26,8 @@ Cargo Hold is a room.
 Crew's Quarters is a room. It is north of Cargo Hold. 
 
 Captain's Quarters is a room. It is south of Center Deck. 
+
+bread is an object. It is in Captain's Quarters.
 
 Center Deck is a room. It is above Cargo Hold. 
 
@@ -35,12 +37,21 @@ Port Deck is a room. It is west of Center Deck.
 
 Bow of the Ship is a room. It is north of Center Deck. 
 
-Seamus is a man in Bow of the Ship. 
+Seamus is a man in Bow of the Ship. Seamus carries a knife. The description is "the cabin boy."
 
-[third puzzle- assembling and lowering dinghy boat into the water so that you can row away.]
+Instead of giving bread to Seamus:
+	say "Seamus is pleased. He gives you the knife.";
+	now player carries knife. 
+
+[third puzzle- assembling and lowering dinghy boat into the water so that you can row away safely.]
+
+Rope is scenery. It is in Port Deck. 
 
 understand "cut [something] with [something]" as cutting it with. 
 cutting it with is an action applying to two things. 
+
+Instead of cutting rope with knife:
+	say "the boat drops."
 
 [player needs to find a knife to cut the rope so the dinghy boat falls into the water.]
 

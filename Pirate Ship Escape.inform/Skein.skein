@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<Skein rootNode="node-1002">
+<Skein rootNode="node-1830">
     <generator>Inform Mac Client (Inform version 1.65/6.33/6M62)</generator>
-    <item nodeId="node-1002">
+    <item nodeId="node-1830">
         <command xml:space="preserve">Pirate Ship Escape</command>
         <result xml:space="preserve">
 
@@ -11,102 +11,103 @@ You are a British sailor who is being held captive on a pirate ship. Tomorrow yo
 
 Pirate Ship Escape
 An Interactive Fiction by ggrune20
-Release 1 / Serial number 190314 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190401 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Holding Cell
 You can see a Jail Door and loose floorboard here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1012"></child>
-            <child nodeId="node-1003"></child>
-            <child nodeId="node-1814"></child>
-            <child nodeId="node-1811"></child>
+        <children><child nodeId="node-1853"></child>
+            <child nodeId="node-1850"></child>
+            <child nodeId="node-1841"></child>
+            <child nodeId="node-1834"></child>
+            <child nodeId="node-1831"></child>
         </children>
     </item>
-    <item nodeId="node-1811">
+    <item nodeId="node-1831">
         <command xml:space="preserve">x loose floorboard</command>
         <result xml:space="preserve">You see nothing special about loose floorboard.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1812"></child>
+        <children><child nodeId="node-1832"></child>
         </children>
     </item>
-    <item nodeId="node-1812">
+    <item nodeId="node-1832">
         <command xml:space="preserve">take floorboard</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1813"></child>
+        <children><child nodeId="node-1833"></child>
         </children>
     </item>
-    <item nodeId="node-1813">
+    <item nodeId="node-1833">
         <command xml:space="preserve">pry the jail door with loose floorboard</command>
         <result xml:space="preserve">you break open the jail door.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1814">
+    <item nodeId="node-1834">
         <command xml:space="preserve">x door</command>
         <result xml:space="preserve">You see nothing special about the Jail Door.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1815"></child>
+        <children><child nodeId="node-1835"></child>
         </children>
     </item>
-    <item nodeId="node-1815">
+    <item nodeId="node-1835">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening the Jail Door)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1816"></child>
+        <children><child nodeId="node-1836"></child>
         </children>
     </item>
-    <item nodeId="node-1816">
+    <item nodeId="node-1836">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening the Jail Door)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1817"></child>
+        <children><child nodeId="node-1837"></child>
         </children>
     </item>
-    <item nodeId="node-1817">
+    <item nodeId="node-1837">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">(first opening the Jail Door)
 It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1818"></child>
+        <children><child nodeId="node-1838"></child>
         </children>
     </item>
-    <item nodeId="node-1818">
+    <item nodeId="node-1838">
         <command xml:space="preserve">take floorboard</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1819"></child>
+        <children><child nodeId="node-1839"></child>
         </children>
     </item>
-    <item nodeId="node-1819">
+    <item nodeId="node-1839">
         <command xml:space="preserve">pry jail door with floorboard</command>
         <result xml:space="preserve">you break open the jail door.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1820"></child>
+        <children><child nodeId="node-1840"></child>
         </children>
     </item>
-    <item nodeId="node-1820">
+    <item nodeId="node-1840">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Cargo Hold
@@ -115,36 +116,36 @@ You can see a Jail Door here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1003">
+    <item nodeId="node-1841">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1004"></child>
+        <children><child nodeId="node-1842"></child>
         </children>
     </item>
-    <item nodeId="node-1004">
+    <item nodeId="node-1842">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Cargo Hold
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1005"></child>
+        <children><child nodeId="node-1843"></child>
         </children>
     </item>
-    <item nodeId="node-1005">
+    <item nodeId="node-1843">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Center Deck
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1006"></child>
+        <children><child nodeId="node-1844"></child>
         </children>
     </item>
-    <item nodeId="node-1006">
+    <item nodeId="node-1844">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Port Deck
@@ -152,58 +153,257 @@ You can see a Dinghy Boat here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1007"></child>
+        <children><child nodeId="node-1845"></child>
         </children>
     </item>
-    <item nodeId="node-1007">
+    <item nodeId="node-1845">
         <command xml:space="preserve">take boat</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1008"></child>
+        <children><child nodeId="node-1846"></child>
         </children>
     </item>
-    <item nodeId="node-1008">
+    <item nodeId="node-1846">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Center Deck
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1009"></child>
+        <children><child nodeId="node-1847"></child>
         </children>
     </item>
-    <item nodeId="node-1009">
+    <item nodeId="node-1847">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Cargo Hold
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1010"></child>
+        <children><child nodeId="node-1848"></child>
         </children>
     </item>
-    <item nodeId="node-1010">
+    <item nodeId="node-1848">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Crew's Quarters
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1011"></child>
+        <children><child nodeId="node-1849"></child>
         </children>
     </item>
-    <item nodeId="node-1011">
+    <item nodeId="node-1849">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1012">
+    <item nodeId="node-1850">
         <command xml:space="preserve">take jail door</command>
         <result xml:space="preserve">That's fixed in place.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1853">
+        <command xml:space="preserve">take floorboard</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1854"></child>
+            <child nodeId="node-1860"></child>
+        </children>
+    </item>
+    <item nodeId="node-1860">
+        <command xml:space="preserve">pry jail door with floorboard</command>
+        <result xml:space="preserve">you break open the jail door. North towards the cargo hold is the only way you can go.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1861"></child>
+        </children>
+    </item>
+    <item nodeId="node-1861">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1862"></child>
+        </children>
+    </item>
+    <item nodeId="node-1862">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1863"></child>
+        </children>
+    </item>
+    <item nodeId="node-1863">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Port Deck
+You can see a Dinghy Boat here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1864"></child>
+        </children>
+    </item>
+    <item nodeId="node-1864">
+        <command xml:space="preserve">take knife</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1871"></child>
+        </children>
+    </item>
+    <item nodeId="node-1871">
+        <command xml:space="preserve">cut rope with knife</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1879"></child>
+        </children>
+    </item>
+    <item nodeId="node-1879">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1880"></child>
+        </children>
+    </item>
+    <item nodeId="node-1880">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Captain's Quarters
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1881"></child>
+        </children>
+    </item>
+    <item nodeId="node-1881">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1882"></child>
+        </children>
+    </item>
+    <item nodeId="node-1882">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Bow of the Ship
+You can see Seamus here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1883"></child>
+        </children>
+    </item>
+    <item nodeId="node-1883">
+        <command xml:space="preserve">take knife from seamus</command>
+        <result xml:space="preserve">That seems to belong to Seamus.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1884"></child>
+        </children>
+    </item>
+    <item nodeId="node-1884">
+        <command xml:space="preserve">kill seamus</command>
+        <result xml:space="preserve">Violence isn't the answer to this one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1885"></child>
+        </children>
+    </item>
+    <item nodeId="node-1885">
+        <command xml:space="preserve">talk to seamus</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1886"></child>
+        </children>
+    </item>
+    <item nodeId="node-1886">
+        <command xml:space="preserve">say hi to seamus</command>
+        <result xml:space="preserve">There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1902"></child>
+        </children>
+    </item>
+    <item nodeId="node-1902">
+        <command xml:space="preserve">x seamus</command>
+        <result xml:space="preserve">the cabin boy.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1854">
+        <command xml:space="preserve">open door</command>
+        <result xml:space="preserve">It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1855"></child>
+        </children>
+    </item>
+    <item nodeId="node-1855">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1856"></child>
+        </children>
+    </item>
+    <item nodeId="node-1856">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening the Jail Door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1857"></child>
+        </children>
+    </item>
+    <item nodeId="node-1857">
+        <command xml:space="preserve">pry door with floorboard</command>
+        <result xml:space="preserve">you break open the jail door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1858"></child>
+        </children>
+    </item>
+    <item nodeId="node-1858">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
