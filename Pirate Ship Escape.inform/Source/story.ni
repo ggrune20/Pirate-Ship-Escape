@@ -45,15 +45,30 @@ Instead of giving bread to Seamus:
 
 [third puzzle- assembling and lowering dinghy boat into the water so that you can row away safely.]
 
-Rope is scenery. It is in Port Deck. 
+rope is scenery. It is in Port Deck. rope can be cut or uncut. 
 
 understand "cut [something] with [something]" as cutting it with. 
 cutting it with is an action applying to two things. 
 
 Instead of cutting rope with knife:
-	say "the boat drops."
+	say "the boat drops down into the water. Jump in the dinghy boat before it floats away.";
+	now rope is cut.
 
 [player needs to find a knife to cut the rope so the dinghy boat falls into the water.]
 
-The Dinghy Boat is a object. It is in Port Deck. 
+dinghy boat is a container. It is in Port Deck. 
+
+understand "jump in [something]" as jumping in it. jumping in it is an action applying to one thing. 
+
+Instead of jumping in dinghy boat: 
+	If rope is cut:
+		say "you jump off the edge of the ship and land hardly in the boat.";
+		now player is in the dinghy boat;
+	else:
+		say "you should drop the dinghy boat into the ocean before you get into it."
+	
+An every turn rule:
+	If player is in dinghy boat,
+	end the story finally saying "You escaped the pirate ship! You win!"
+
 
