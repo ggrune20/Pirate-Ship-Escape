@@ -43,7 +43,7 @@ Global Story = BC_0;
 Constant Headline BC_1;
 Constant Story_Author BC_2;
 Release 1;
-Serial "190401";
+Serial "190403";
 
 Default Story 0;
 Default Headline 0;
@@ -49272,7 +49272,6 @@ Verb 'pry'
 
 Constant TX_PS_54 = ">";
 Constant TX_PS_3 = "An Interactive Fiction";
-Constant TX_PS_32 = "As good-looking as ever.";
 Constant TX_PS_50 = "Bow of the Ship";
 Constant TX_PS_42 = "Bread";
 Constant TX_PS_40 = "Captain's Quarters";
@@ -49293,6 +49292,7 @@ Constant TX_PS_47 = "Rope";
 Constant TX_PS_51 = "Seamus";
 Constant TX_PS_44 = "Starboard Deck";
 Constant TX_PS_60 = "UNDO the last command";
+Constant TX_PS_32 = "You are tall and skinny but strong and defined from moving crates and pulling ropes on the ships you have been on throughout your life. Your skin is bronze from the sun and your face is slightly weathered from spending years at sea. You are wearing your sailors hat, a white cotton undergarment, and baige pants. The pirates took your shoes so you are barefoot.";
 Constant TX_PS_61 = "You escaped the pirate ship! You win!";
 Array TX_L_61 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_61;
 Constant TX_PS_33 = "Yourself";

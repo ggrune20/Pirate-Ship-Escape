@@ -3,6 +3,8 @@
 When play begins: 
 say "You are a British sailor who is being held captive on a pirate ship. Tomorrow you are supposed to walk the plank. It is night time and most of the pirates are asleep, this is your only chance to get off of the pirate ship and make it out alive. However, you also know the Captain has treasure he took from you. If you take back your treasure and escape the ship with your life you will be a legend amongst your British sailors. Good luck!"
 
+The description of the player is "You are tall and skinny but strong and defined from moving crates and pulling ropes on the ships you have been on throughout your life. Your skin is bronze from the sun and your face is slightly weathered from spending years at sea. You are wearing your sailors hat, a white cotton undergarment, and baige pants. The pirates took your shoes so you are barefoot."
+
 Holding Cell is a room.  
 
 [first puzzle- breaking out of jail cell]
