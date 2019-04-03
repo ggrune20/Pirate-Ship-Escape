@@ -3,7 +3,7 @@
 When play begins: 
 say "You are a British sailor who is being held captive on a pirate ship. Tomorrow you are supposed to walk the plank. It is night time and most of the pirates are asleep, this is your only chance to get off of the pirate ship and make it out alive. However, you also know the Captain has treasure he took from you. If you take back your treasure and escape the ship with your life you will be a legend amongst your British sailors. Good luck!"
 
-The description of the player is "You are tall and skinny but strong and defined from moving crates and pulling ropes on the ships you have been on throughout your life. Your skin is bronze from the sun and your face is slightly weathered from spending years at sea. You are wearing your sailors hat, a white cotton undergarment, and baige pants. The pirates took your shoes so you are barefoot."
+The description of the player is "You are tall and skinny but also strong and defined from moving crates and pulling ropes on the ships you have been on throughout your life. Your skin is bronze from the sun and your face is slightly weathered from spending years at sea. You are wearing your sailors hat, a white cotton undergarment, and baige pants. The pirates took your shoes so you are barefoot."
 
 Holding Cell is a room.  
 
@@ -58,14 +58,13 @@ Instead of cutting rope with knife:
 
 [player needs to find a knife to cut the rope so the dinghy boat falls into the water.]
 
-dinghy boat is a container. It is in Port Deck. 
+dinghy boat is a vehicle. It is in Port Deck. 
 
-understand "jump in [something]" as jumping in it. jumping in it is an action applying to one thing. 
+understand "jump in [something]" as entering. jumping in it is an action applying to one thing. 
 
-Instead of jumping in dinghy boat: 
+Instead of entering dinghy boat: 
 	If rope is cut:
-		say "you jump off the edge of the ship and land hardly in the boat.";
-		now player is in the dinghy boat;
+		end the story finally saying "you jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win!";
 	else:
 		say "you should drop the dinghy boat into the ocean before you get into it."
 	

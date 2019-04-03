@@ -11,7 +11,7 @@ You are a British sailor who is being held captive on a pirate ship. Tomorrow yo
 
 Pirate Ship Escape
 An Interactive Fiction by ggrune20
-Release 1 / Serial number 190401 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190403 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Holding Cell
 You can see a Jail Door and loose floorboard here.
@@ -23,7 +23,236 @@ You can see a Jail Door and loose floorboard here.
             <child nodeId="node-1841"></child>
             <child nodeId="node-1834"></child>
             <child nodeId="node-1831"></child>
+            <child nodeId="node-2528"></child>
         </children>
+    </item>
+    <item nodeId="node-2528">
+        <command xml:space="preserve">x me</command>
+        <result xml:space="preserve">You are tall and skinny but also strong and defined from moving crates and pulling ropes on the ships you have been on throughout your life. Your skin is bronze from the sun and your face is slightly weathered from spending years at sea. You are wearing your sailors hat, a white cotton undergarment, and baige pants. The pirates took your shoes so you are barefoot.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2529"></child>
+        </children>
+    </item>
+    <item nodeId="node-2529">
+        <command xml:space="preserve">take floorboard</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2530"></child>
+        </children>
+    </item>
+    <item nodeId="node-2530">
+        <command xml:space="preserve">pry door with floorboard</command>
+        <result xml:space="preserve">you break open the jail door. North towards the cargo hold is the only way you can go.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2531"></child>
+        </children>
+    </item>
+    <item nodeId="node-2531">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2532"></child>
+        </children>
+    </item>
+    <item nodeId="node-2532">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2533"></child>
+        </children>
+    </item>
+    <item nodeId="node-2533">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Port Deck
+You can see dinghy boat (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2534"></child>
+        </children>
+    </item>
+    <item nodeId="node-2534">
+        <command xml:space="preserve">x rope</command>
+        <result xml:space="preserve">You see nothing special about rope.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2535"></child>
+        </children>
+    </item>
+    <item nodeId="node-2535">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2536"></child>
+        </children>
+    </item>
+    <item nodeId="node-2536">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Bow of the Ship
+You can see Seamus here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2537"></child>
+        </children>
+    </item>
+    <item nodeId="node-2537">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2538"></child>
+        </children>
+    </item>
+    <item nodeId="node-2538">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Captain's Quarters
+You can see bread here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2539"></child>
+        </children>
+    </item>
+    <item nodeId="node-2539">
+        <command xml:space="preserve">take bread</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2540"></child>
+        </children>
+    </item>
+    <item nodeId="node-2540">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2541"></child>
+        </children>
+    </item>
+    <item nodeId="node-2541">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Bow of the Ship
+You can see Seamus here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2542"></child>
+        </children>
+    </item>
+    <item nodeId="node-2542">
+        <command xml:space="preserve">give seamus bread</command>
+        <result xml:space="preserve">Seamus is pleased. He gives you the knife.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2543"></child>
+        </children>
+    </item>
+    <item nodeId="node-2543">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2544"></child>
+        </children>
+    </item>
+    <item nodeId="node-2544">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Port Deck
+You can see dinghy boat (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2545"></child>
+        </children>
+    </item>
+    <item nodeId="node-2545">
+        <command xml:space="preserve">cut rope with knife</command>
+        <result xml:space="preserve">the boat drops down into the water. Jump in the dinghy boat before it floats away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2546"></child>
+        </children>
+    </item>
+    <item nodeId="node-2546">
+        <command xml:space="preserve">jump in boat</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2566"></child>
+        </children>
+    </item>
+    <item nodeId="node-2566">
+        <command xml:space="preserve">jump in dinghy boat</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2567"></child>
+        </children>
+    </item>
+    <item nodeId="node-2567">
+        <command xml:space="preserve">jump in dinghy boat</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2568"></child>
+        </children>
+    </item>
+    <item nodeId="node-2568">
+        <command xml:space="preserve">jump in dinghy boat</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2591"></child>
+        </children>
+    </item>
+    <item nodeId="node-2591">
+        <command xml:space="preserve">jump in dinghy boat</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2592"></child>
+        </children>
+    </item>
+    <item nodeId="node-2592">
+        <command xml:space="preserve">get in dinghy boat</command>
+        <result xml:space="preserve">That's not something you can enter.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2617"></child>
+        </children>
+    </item>
+    <item nodeId="node-2617">
+        <command xml:space="preserve">jump in dinghy boat</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1831">
         <command xml:space="preserve">x loose floorboard</command>
@@ -514,7 +743,8 @@ Center Deck
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2409"></child>
+        <children><child nodeId="node-2622"></child>
+            <child nodeId="node-2409"></child>
         </children>
     </item>
     <item nodeId="node-2409">
@@ -755,6 +985,118 @@ You can see dinghy boat (empty) here.
     <item nodeId="node-2463">
         <command xml:space="preserve">jump in dinghy boat</command>
         <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2622">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Captain's Quarters
+You can see bread here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2623"></child>
+        </children>
+    </item>
+    <item nodeId="node-2623">
+        <command xml:space="preserve">take bread</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2624"></child>
+        </children>
+    </item>
+    <item nodeId="node-2624">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2625"></child>
+        </children>
+    </item>
+    <item nodeId="node-2625">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Bow of the Ship
+You can see Seamus here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2626"></child>
+        </children>
+    </item>
+    <item nodeId="node-2626">
+        <command xml:space="preserve">give seamus bread</command>
+        <result xml:space="preserve">Seamus is pleased. He gives you the knife.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2627"></child>
+        </children>
+    </item>
+    <item nodeId="node-2627">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2628"></child>
+        </children>
+    </item>
+    <item nodeId="node-2628">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Port Deck
+You can see dinghy boat (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2629"></child>
+        </children>
+    </item>
+    <item nodeId="node-2629">
+        <command xml:space="preserve">cut rope with knife</command>
+        <result xml:space="preserve">the boat drops down into the water. Jump in the dinghy boat before it floats away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2630"></child>
+        </children>
+    </item>
+    <item nodeId="node-2630">
+        <command xml:space="preserve">jump in dinghy boat</command>
+        <result xml:space="preserve">
+
+    *** you jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win! ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2644"></child>
+        </children>
+    </item>
+    <item nodeId="node-2644">
+        <command xml:space="preserve">jump in dinghy boat</command>
+        <result xml:space="preserve">Please give one of the answers above.
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2659"></child>
+        </children>
+    </item>
+    <item nodeId="node-2659">
+        <command xml:space="preserve">enter dinghy boat</command>
+        <result xml:space="preserve">Please give one of the answers above.
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-2495">
