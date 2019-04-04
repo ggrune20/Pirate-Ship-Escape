@@ -35,6 +35,8 @@ Center Deck is a room. It is above Cargo Hold.
 
 Starboard Deck is a room. It is east of Center Deck. 
 
+wooden oars is an object. It is in Starboard Deck.
+
 Port Deck is a room. It is west of Center Deck. 
 
 Bow of the Ship is a room. It is north of Center Deck. 
@@ -58,15 +60,21 @@ Instead of cutting rope with knife:
 
 [player needs to find a knife to cut the rope so the dinghy boat falls into the water.]
 
-dinghy boat is a vehicle. It is in Port Deck. 
+dinghy boat is a vehicle. It is in Port Deck.
+
+[understand "attach [something] to [something]" as putting something on something. attaching it to is an action applying to two things.]
+
+Instead of putting wooden oars on dinghy boat:
+	say "you attach the wooden oars to the dinghy boat";
+	now wooden oars are on dinghy boat.
 
 understand "jump in [something]" as entering. jumping in it is an action applying to one thing. 
 
 Instead of entering dinghy boat: 
 	If rope is cut:
-		end the story finally saying "you jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win!";
-	else:
-		say "you should drop the dinghy boat into the ocean before you get into it."
+		end the story finally saying "You jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win!";
+	otherwise:
+		say "You should drop the dinghy boat into the ocean before you get into it."
 	
 An every turn rule:
 	If player is in dinghy boat,
