@@ -31,6 +31,24 @@ Captain's Quarters is a room. It is south of Center Deck.
 
 bread is an object. It is in Captain's Quarters.
 
+the roof is a room. It is above Captain's Quarters. 
+
+rope is an object. It is in Crew's Quarters. 
+
+hooking claw is an object. It is in Crew's Quarters. 
+
+Understand "combine [something] with [something]" as combining it with. Combining it with is an action applying to two carried things. 
+
+grappling hook is an object.
+
+Instead of combining rope with hooking claw:
+	say "you now have a grappling hook.";
+	move grappling hook to player.
+
+Instead of going up when the player is in Center Deck:
+	If player carries grappling hook:
+		move player to the roof.	
+
 Center Deck is a room. It is above Cargo Hold. 
 
 Starboard Deck is a room. It is east of Center Deck. 
@@ -49,30 +67,35 @@ Instead of giving bread to Seamus:
 
 [third puzzle- assembling and lowering dinghy boat into the water so that you can row away safely.]
 
-rope is scenery. It is in Port Deck. rope can be cut or uncut. 
+straps is scenery. It is in Port Deck. straps can be cut or uncut. 
 
 understand "cut [something] with [something]" as cutting it with. 
 cutting it with is an action applying to two things. 
 
-Instead of cutting rope with knife:
+Instead of cutting straps with knife:
 	say "the boat drops down into the water. Jump in the dinghy boat before it floats away.";
 	now rope is cut.
 
 [player needs to find a knife to cut the rope so the dinghy boat falls into the water.]
 
-dinghy boat is a vehicle. It is in Port Deck.
+dinghy boat is a vehicle. It is in Port Deck. 
 
-[understand "attach [something] to [something]" as putting something on something. attaching it to is an action applying to two things.]
+oarsattached is a number variable. oarsattached is 0.
 
-Instead of putting wooden oars on dinghy boat:
+[understand "attach [something] to [something]" as attaching it to. attaching it to is an action applying to two things.]
+
+[Instead of attaching wooden oars to dingy boat:
 	say "you attach the wooden oars to the dinghy boat";
-	now wooden oars are on dinghy boat.
+	now oarsattached is 1;
+	remove wooden oars from play.]
 
 understand "jump in [something]" as entering. jumping in it is an action applying to one thing. 
 
 Instead of entering dinghy boat: 
-	If rope is cut:
-		end the story finally saying "You jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win!";
+	If oarsattached is 1:
+		say "Now that the oars are attached to the dinghy boat. Try lowering it into the ocean.";
+		If straps is cut:
+			end the story finally saying "You jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win!";
 	otherwise:
 		say "You should drop the dinghy boat into the ocean before you get into it."
 	
