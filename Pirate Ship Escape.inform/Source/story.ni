@@ -27,6 +27,8 @@ Cargo Hold is a room.
 
 Crew's Quarters is a room. It is north of Cargo Hold. 
 
+[player needs to wear pirate clothing to get into crew's quarters]
+
 Captain's Quarters is a room. It is south of Center Deck. 
 
 bread is an object. It is in Captain's Quarters.
@@ -42,6 +44,10 @@ Understand "combine [something] with [something]" as combining it with. Combinin
 grappling hook is an object.
 
 Instead of combining rope with hooking claw:
+	say "you now have a grappling hook.";
+	move grappling hook to player.
+	
+Instead of combining hooking claw with rope:
 	say "you now have a grappling hook.";
 	move grappling hook to player.
 
@@ -73,8 +79,11 @@ understand "cut [something] with [something]" as cutting it with.
 cutting it with is an action applying to two things. 
 
 Instead of cutting straps with knife:
-	say "the boat drops down into the water. Jump in the dinghy boat before it floats away.";
-	now rope is cut.
+	If oarsattached is 1:
+		say "the boat drops down into the water. Jump in the dinghy boat before it floats away.";
+		now straps is cut;
+	otherwise:
+		say "try connecting the oars to the dinghy boat first."
 
 [player needs to find a knife to cut the rope so the dinghy boat falls into the water.]
 
@@ -82,12 +91,12 @@ dinghy boat is a vehicle. It is in Port Deck.
 
 oarsattached is a number variable. oarsattached is 0.
 
-[understand "attach [something] to [something]" as attaching it to. attaching it to is an action applying to two things.]
+understand "connect [something] to [something]" as connecting it to. connecting it to is an action applying to two things.
 
-[Instead of attaching wooden oars to dingy boat:
+Instead of connecting wooden oars to dinghy boat:
 	say "you attach the wooden oars to the dinghy boat";
 	now oarsattached is 1;
-	remove wooden oars from play.]
+	remove wooden oars from play.
 
 understand "jump in [something]" as entering. jumping in it is an action applying to one thing. 
 
