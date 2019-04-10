@@ -874,11 +874,12 @@ You can see a dinghy boat (empty) here.
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Cargo Hold
-You can see a Jail Door here.
+You can see a Jail Door, eyepatch and pirate coat here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-3059"></child>
+            <child nodeId="node-3184"></child>
             <child nodeId="node-2408"></child>
         </children>
     </item>
@@ -1484,6 +1485,25 @@ You can see dinghy boat (empty) here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-3184">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">(first taking eyepatch)
+You put on eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3185"></child>
+        </children>
+    </item>
+    <item nodeId="node-3185">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-3059">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
@@ -1831,6 +1851,123 @@ You can see dinghy boat (empty) here.
     <item nodeId="node-3135">
         <command xml:space="preserve">cut straps with rope</command>
         <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3165"></child>
+        </children>
+    </item>
+    <item nodeId="node-3165">
+        <command xml:space="preserve">connect oars to boat</command>
+        <result xml:space="preserve">you attach the wooden oars to the dinghy boat
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3166"></child>
+        </children>
+    </item>
+    <item nodeId="node-3166">
+        <command xml:space="preserve">cut straps</command>
+        <result xml:space="preserve">Cutting it up would achieve little.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3167"></child>
+        </children>
+    </item>
+    <item nodeId="node-3167">
+        <command xml:space="preserve">cut straps with knife</command>
+        <result xml:space="preserve">the boat drops down into the water. Jump in the dinghy boat before it floats away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3168"></child>
+        </children>
+    </item>
+    <item nodeId="node-3168">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Port Deck
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3169"></child>
+        </children>
+    </item>
+    <item nodeId="node-3169">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Port Deck
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3170"></child>
+        </children>
+    </item>
+    <item nodeId="node-3170">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Port Deck
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3171"></child>
+        </children>
+    </item>
+    <item nodeId="node-3171">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Port Deck
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3172"></child>
+        </children>
+    </item>
+    <item nodeId="node-3172">
+        <command xml:space="preserve">cut straps with knife</command>
+        <result xml:space="preserve">try connecting the oars to the dinghy boat first.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3173"></child>
+        </children>
+    </item>
+    <item nodeId="node-3173">
+        <command xml:space="preserve">connect oars to boat</command>
+        <result xml:space="preserve">you attach the wooden oars to the dinghy boat
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3174"></child>
+        </children>
+    </item>
+    <item nodeId="node-3174">
+        <command xml:space="preserve">enter boat</command>
+        <result xml:space="preserve">Now that the oars are attached to the dinghy boat. Try lowering it into the ocean.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3175"></child>
+        </children>
+    </item>
+    <item nodeId="node-3175">
+        <command xml:space="preserve">cut straps with knife</command>
+        <result xml:space="preserve">the boat drops down into the water. Jump in the dinghy boat before it floats away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3176"></child>
+        </children>
+    </item>
+    <item nodeId="node-3176">
+        <command xml:space="preserve">jump in boat</command>
+        <result xml:space="preserve">Now that the oars are attached to the dinghy boat. Try lowering it into the ocean.
+
+
+
+    *** You jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win! ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-3061">
@@ -2525,7 +2662,7 @@ It seems to be locked.
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Cargo Hold
-You can see a Jail Door here.
+You can see a Jail Door, eyepatch and pirate coat here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

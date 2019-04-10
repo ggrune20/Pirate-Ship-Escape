@@ -25,7 +25,21 @@ Instead of prying the jail door with loose floorboard:
 
 Cargo Hold is a room. 
 
+eyepatch is an object. It is in Cargo Hold. It is wearable. 
+
+pirate coat is an object. It is in Cargo Hold. It is wearable. 
+
 Crew's Quarters is a room. It is north of Cargo Hold. 
+
+An every turn rule:
+	If player is in Crew's Quarters:
+		If player is wearing eyepatch:
+			If player is wearing pirate coat:
+				say "you were able to sneak into the Crew's Quarters unnoticed.";
+			otherwise: 
+				end the story finally saying "A pirate noticed you and you were caught. You Lose.";
+		otherwise:
+			end the story finally saying "A pirate noticed you and you were caught. You Lose."
 
 [player needs to wear pirate clothing to get into crew's quarters]
 
