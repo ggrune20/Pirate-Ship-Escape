@@ -7,11 +7,11 @@
         <result xml:space="preserve">
 
 
-You are a British sailor who is being held captive on a pirate ship. Tomorrow you are supposed to walk the plank. It is night time and most of the pirates are asleep, this is your only chance to get off of the pirate ship and make it out alive. However, you also know the Captain has treasure he took from you. If you take back your treasure and escape the ship with your life you will be a legend amongst your British sailors. Good luck!
+You are a British sailor who is being held captive on a pirate ship. It is night time and most of the pirates are asleep, this is your only chance to get off of the pirate ship and make it out alive. However, you also know the Captain has treasure he took from you. If you take back your treasure and escape the ship with your life you will be a legend amongst your British sailors. Good luck!
 
 Pirate Ship Escape
 An Interactive Fiction by ggrune20
-Release 1 / Serial number 190409 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190411 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Holding Cell
 You can see a Jail Door and loose floorboard here.
@@ -19,6 +19,7 @@ You can see a Jail Door and loose floorboard here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-3047"></child>
+            <child nodeId="node-3204"></child>
             <child nodeId="node-1853"></child>
             <child nodeId="node-1850"></child>
             <child nodeId="node-1841"></child>
@@ -1501,6 +1502,101 @@ You put on eyepatch.
 Crew's Quarters
 You can see rope and hooking claw here.
 
+
+
+    *** A pirate noticed you and you were caught. You Lose. ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3196"></child>
+        </children>
+    </item>
+    <item nodeId="node-3196">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Cargo Hold
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3197"></child>
+        </children>
+    </item>
+    <item nodeId="node-3197">
+        <command xml:space="preserve">take off eyepatch</command>
+        <result xml:space="preserve">You take off eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3198"></child>
+        </children>
+    </item>
+    <item nodeId="node-3198">
+        <command xml:space="preserve">put on pirate coat</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3199"></child>
+        </children>
+    </item>
+    <item nodeId="node-3199">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+
+
+    *** A pirate noticed you and you were caught. You Lose. ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3200"></child>
+        </children>
+    </item>
+    <item nodeId="node-3200">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Cargo Hold
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3201"></child>
+        </children>
+    </item>
+    <item nodeId="node-3201">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">You put on eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3202"></child>
+        </children>
+    </item>
+    <item nodeId="node-3202">
+        <command xml:space="preserve">put on pirate coat</command>
+        <result xml:space="preserve">You're already wearing that!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3203"></child>
+        </children>
+    </item>
+    <item nodeId="node-3203">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
@@ -2628,6 +2724,890 @@ You can see dinghy boat (empty) here.
     <item nodeId="node-2868">
         <command xml:space="preserve">jump in boat</command>
         <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3204">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">loose floorboard: Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3205"></child>
+        </children>
+    </item>
+    <item nodeId="node-3205">
+        <command xml:space="preserve">pry door with floorboard</command>
+        <result xml:space="preserve">you break open the jail door. North towards the cargo hold is the only way you can go.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3206"></child>
+        </children>
+    </item>
+    <item nodeId="node-3206">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door, eyepatch and pirate coat here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3257"></child>
+            <child nodeId="node-3207"></child>
+        </children>
+    </item>
+    <item nodeId="node-3207">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">(first taking eyepatch)
+You put on eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3338"></child>
+            <child nodeId="node-3247"></child>
+            <child nodeId="node-3208"></child>
+        </children>
+    </item>
+    <item nodeId="node-3208">
+        <command xml:space="preserve">take off eye patch</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3209"></child>
+        </children>
+    </item>
+    <item nodeId="node-3209">
+        <command xml:space="preserve">take off eyepatch</command>
+        <result xml:space="preserve">You take off eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3210"></child>
+        </children>
+    </item>
+    <item nodeId="node-3210">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+
+
+    *** A pirate noticed you and you were caught. You Lose. ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3211"></child>
+        </children>
+    </item>
+    <item nodeId="node-3211">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Cargo Hold
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3212"></child>
+        </children>
+    </item>
+    <item nodeId="node-3212">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">You put on eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3213"></child>
+        </children>
+    </item>
+    <item nodeId="node-3213">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+
+
+    *** A pirate noticed you and you were caught. You Lose. ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3214"></child>
+        </children>
+    </item>
+    <item nodeId="node-3214">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Cargo Hold
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3215"></child>
+        </children>
+    </item>
+    <item nodeId="node-3215">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">You're already wearing that!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3216"></child>
+        </children>
+    </item>
+    <item nodeId="node-3216">
+        <command xml:space="preserve">put on pirate coat</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3217"></child>
+        </children>
+    </item>
+    <item nodeId="node-3217">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3218"></child>
+        </children>
+    </item>
+    <item nodeId="node-3218">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3219"></child>
+        </children>
+    </item>
+    <item nodeId="node-3219">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">Please answer yes or no.&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3220"></child>
+        </children>
+    </item>
+    <item nodeId="node-3220">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+You are a British sailor who is being held captive on a pirate ship. Tomorrow you are supposed to walk the plank. It is night time and most of the pirates are asleep, this is your only chance to get off of the pirate ship and make it out alive. However, you also know the Captain has treasure he took from you. If you take back your treasure and escape the ship with your life you will be a legend amongst your British sailors. Good luck!
+
+Pirate Ship Escape
+An Interactive Fiction by ggrune20
+Release 1 / Serial number 190411 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Holding Cell
+You can see a Jail Door and loose floorboard here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3221"></child>
+        </children>
+    </item>
+    <item nodeId="node-3221">
+        <command xml:space="preserve">take floorboard</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3222"></child>
+        </children>
+    </item>
+    <item nodeId="node-3222">
+        <command xml:space="preserve">pry door with floorboard</command>
+        <result xml:space="preserve">you break open the jail door. North towards the cargo hold is the only way you can go.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3223"></child>
+        </children>
+    </item>
+    <item nodeId="node-3223">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door, eyepatch and pirate coat here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3224"></child>
+        </children>
+    </item>
+    <item nodeId="node-3224">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+
+
+    *** A pirate noticed you and you were caught. You Lose. ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3225"></child>
+        </children>
+    </item>
+    <item nodeId="node-3225">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Cargo Hold
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3226"></child>
+        </children>
+    </item>
+    <item nodeId="node-3226">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3227"></child>
+        </children>
+    </item>
+    <item nodeId="node-3227">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Captain's Quarters
+You can see bread here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3228"></child>
+        </children>
+    </item>
+    <item nodeId="node-3228">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3229"></child>
+        </children>
+    </item>
+    <item nodeId="node-3229">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door, eyepatch and pirate coat here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3230"></child>
+        </children>
+    </item>
+    <item nodeId="node-3230">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+
+
+    *** A pirate noticed you and you were caught. You Lose. ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3231"></child>
+        </children>
+    </item>
+    <item nodeId="node-3231">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Cargo Hold
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3232"></child>
+        </children>
+    </item>
+    <item nodeId="node-3232">
+        <command xml:space="preserve">put on all</command>
+        <result xml:space="preserve">(loose floorboard)
+You can't wear that!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3233"></child>
+        </children>
+    </item>
+    <item nodeId="node-3233">
+        <command xml:space="preserve">put on eye patch</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3234"></child>
+        </children>
+    </item>
+    <item nodeId="node-3234">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">(first taking eyepatch)
+You put on eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3235"></child>
+        </children>
+    </item>
+    <item nodeId="node-3235">
+        <command xml:space="preserve">put on pirate coat</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3236"></child>
+        </children>
+    </item>
+    <item nodeId="node-3236">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3237"></child>
+        </children>
+    </item>
+    <item nodeId="node-3237">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">rope: Taken.
+hooking claw: Taken.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3238"></child>
+        </children>
+    </item>
+    <item nodeId="node-3238">
+        <command xml:space="preserve">combine rope with claw</command>
+        <result xml:space="preserve">you now have a grappling hook.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3239"></child>
+        </children>
+    </item>
+    <item nodeId="node-3239">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3240"></child>
+        </children>
+    </item>
+    <item nodeId="node-3240">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3241"></child>
+        </children>
+    </item>
+    <item nodeId="node-3241">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Captain's Quarters
+You can see bread here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3242"></child>
+        </children>
+    </item>
+    <item nodeId="node-3242">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3247">
+        <command xml:space="preserve">put on pirate coat</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3248"></child>
+        </children>
+    </item>
+    <item nodeId="node-3248">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3249"></child>
+        </children>
+    </item>
+    <item nodeId="node-3249">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">rope: Taken.
+hooking claw: Taken.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3250"></child>
+        </children>
+    </item>
+    <item nodeId="node-3250">
+        <command xml:space="preserve">combine claw with rope</command>
+        <result xml:space="preserve">you now have a grappling hook.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3251"></child>
+        </children>
+    </item>
+    <item nodeId="node-3251">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3252"></child>
+        </children>
+    </item>
+    <item nodeId="node-3252">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3253"></child>
+        </children>
+    </item>
+    <item nodeId="node-3253">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You throw the grappling claw and it hooks onto the roof. You climb the rope.
+
+roof
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3338">
+        <command xml:space="preserve">put on coat</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3339"></child>
+        </children>
+    </item>
+    <item nodeId="node-3339">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3340"></child>
+        </children>
+    </item>
+    <item nodeId="node-3340">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">rope: Taken.
+hooking claw: Taken.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3392"></child>
+            <child nodeId="node-3341"></child>
+        </children>
+    </item>
+    <item nodeId="node-3341">
+        <command xml:space="preserve">combine rope with claw</command>
+        <result xml:space="preserve">you now have a grappling hook.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3342"></child>
+        </children>
+    </item>
+    <item nodeId="node-3342">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3343"></child>
+        </children>
+    </item>
+    <item nodeId="node-3343">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3344"></child>
+        </children>
+    </item>
+    <item nodeId="node-3344">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You throw the grappling claw and it hooks onto the roof. You climb the rope.
+
+roof
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3356"></child>
+        </children>
+    </item>
+    <item nodeId="node-3356">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3369"></child>
+        </children>
+    </item>
+    <item nodeId="node-3369">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3383"></child>
+        </children>
+    </item>
+    <item nodeId="node-3383">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3384"></child>
+        </children>
+    </item>
+    <item nodeId="node-3384">
+        <command xml:space="preserve">climb up wall</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3392">
+        <command xml:space="preserve">combine claw with rope</command>
+        <result xml:space="preserve">you now have a grappling hook.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3393"></child>
+        </children>
+    </item>
+    <item nodeId="node-3393">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3394"></child>
+        </children>
+    </item>
+    <item nodeId="node-3394">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3395"></child>
+        </children>
+    </item>
+    <item nodeId="node-3395">
+        <command xml:space="preserve">climb up wall</command>
+        <result xml:space="preserve">You throw the grappling claw and it hooks onto the roof. You climb the rope.
+
+roof
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3396"></child>
+        </children>
+    </item>
+    <item nodeId="node-3396">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3397"></child>
+        </children>
+    </item>
+    <item nodeId="node-3397">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">roof
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3398"></child>
+        </children>
+    </item>
+    <item nodeId="node-3398">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Center Deck
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3399"></child>
+        </children>
+    </item>
+    <item nodeId="node-3399">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You throw the grappling claw and it hooks onto the roof. You climb the rope.
+
+roof
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3257">
+        <command xml:space="preserve">put on all</command>
+        <result xml:space="preserve">(loose floorboard)
+You can't wear that!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3258"></child>
+        </children>
+    </item>
+    <item nodeId="node-3258">
+        <command xml:space="preserve">put on pirate coat</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3259"></child>
+        </children>
+    </item>
+    <item nodeId="node-3259">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">(first taking eyepatch)
+You put on eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3260"></child>
+        </children>
+    </item>
+    <item nodeId="node-3260">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3261"></child>
+        </children>
+    </item>
+    <item nodeId="node-3261">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">rope: Taken.
+hooking claw: Taken.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3262"></child>
+        </children>
+    </item>
+    <item nodeId="node-3262">
+        <command xml:space="preserve">combine claw with rope</command>
+        <result xml:space="preserve">you now have a grappling hook.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3263"></child>
+        </children>
+    </item>
+    <item nodeId="node-3263">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3264"></child>
+        </children>
+    </item>
+    <item nodeId="node-3264">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3265"></child>
+        </children>
+    </item>
+    <item nodeId="node-3265">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3266"></child>
+        </children>
+    </item>
+    <item nodeId="node-3266">
+        <command xml:space="preserve">climb up wall</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3267"></child>
+        </children>
+    </item>
+    <item nodeId="node-3267">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3268"></child>
+        </children>
+    </item>
+    <item nodeId="node-3268">
+        <command xml:space="preserve">climb down wall</command>
+        <result xml:space="preserve">I only understood you as far as wanting to climb down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3284"></child>
+        </children>
+    </item>
+    <item nodeId="node-3284">
+        <command xml:space="preserve">climb down wall</command>
+        <result xml:space="preserve">I only understood you as far as wanting to climb down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3285"></child>
+        </children>
+    </item>
+    <item nodeId="node-3285">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Center Deck
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3286"></child>
+        </children>
+    </item>
+    <item nodeId="node-3286">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Center Deck
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3287"></child>
+        </children>
+    </item>
+    <item nodeId="node-3287">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Center Deck
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3288"></child>
+        </children>
+    </item>
+    <item nodeId="node-3288">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Center Deck
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3289"></child>
+        </children>
+    </item>
+    <item nodeId="node-3289">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3311"></child>
+        </children>
+    </item>
+    <item nodeId="node-3311">
+        <command xml:space="preserve">scale down wall</command>
+        <result xml:space="preserve">I only understood you as far as wanting to scale down.
+
+&gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-3047">

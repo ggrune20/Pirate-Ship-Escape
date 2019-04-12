@@ -1,7 +1,7 @@
 "Pirate Ship Escape" by ggrune20
 
 When play begins: 
-say "You are a British sailor who is being held captive on a pirate ship. Tomorrow you are supposed to walk the plank. It is night time and most of the pirates are asleep, this is your only chance to get off of the pirate ship and make it out alive. However, you also know the Captain has treasure he took from you. If you take back your treasure and escape the ship with your life you will be a legend amongst your British sailors. Good luck!"
+say "You are a British sailor who is being held captive on a pirate ship. It is night time and most of the pirates are asleep, this is your only chance to get off of the pirate ship and make it out alive. However, you also know the Captain has treasure he took from you. If you take back your treasure and escape the ship with your life you will be a legend amongst your British sailors. Good luck!"
 
 The description of the player is "You are tall and skinny but also strong and defined from moving crates and pulling ropes on the ships you have been on throughout your life. Your skin is bronze from the sun and your face is slightly weathered from spending years at sea. You are wearing your sailors hat, a white cotton undergarment, and baige pants. The pirates took your shoes so you are barefoot."
 
@@ -45,9 +45,11 @@ An every turn rule:
 
 Captain's Quarters is a room. It is south of Center Deck. 
 
+[locked door]
+
 bread is an object. It is in Captain's Quarters.
 
-the roof is a room. It is above Captain's Quarters. 
+roof is a room. It is above Captain's Quarters. 
 
 rope is an object. It is in Crew's Quarters. 
 
@@ -64,6 +66,22 @@ Instead of combining rope with hooking claw:
 Instead of combining hooking claw with rope:
 	say "you now have a grappling hook.";
 	move grappling hook to player.
+
+wall is scenery in Center Deck. 
+
+Understand "climb up [something]" as up. 
+
+Instead of climbing wall:
+	If player is in roof:
+		If the player carries the grappling hook:
+			say "You use the grappling hook to scale down the wall.";
+			move player to Center Deck;
+	If player is in Center Deck:
+		If the player carries the grappling hook:
+			say "You throw the grappling claw and it hooks onto the roof. You climb the rope.";
+			move player to roof;
+		otherwise:
+			say "I need something to help me scale this wall.".
 
 Instead of going up when the player is in Center Deck:
 	If player carries grappling hook:
