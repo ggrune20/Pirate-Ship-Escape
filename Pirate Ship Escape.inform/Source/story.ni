@@ -109,6 +109,25 @@ Bow of the Ship is a room. It is north of Center Deck. The description is "The C
 
 Seamus is a man in Bow of the Ship. Seamus carries a knife. The description is "the cabin boy. His stomach is growling and he is clearly very hungry."
 
+Talking to is an action applying to one visible thing. Understand "talk to [someone]" or “converse with [someone]” as talking to.
+
+Instead of talking to Seamus:
+	say "'Hi there. How are you?' you say confidently.
+	[paragraph break]'Not too good. I'm really hungry.' he complains.
+	[paragraph break]'Are you looking for some food?' you inquire.
+	[paragraph break]'I'm starving mate. If you have any food, I'd be willing to trade you my knife for it.'"
+
+food is a thing.
+
+Quizzing it about is an action applying to one thing and one visible thing. Understand "ask
+[someone] about [any thing]" and "quiz [someone] about [any thing]" as quizzing it about.
+
+Instead of quizzing Seamus about knife:
+	say "'This knife can cut anything lad, a rope, a strap, you name it. I'd given the captain this knife for the food in his quarters any day but he doesn't need no knife.' says Seamus."
+	
+Instead of quizzing Seamus about food:
+	say "'The Captain barely feeds us. I know he has food in his quarters but I'm not allowed in there. I'm just the cabin boy.' Seamus responds."
+
 Instead of giving bread to Seamus:
 	say "Seamus is pleased. He gives you the knife.";
 	now player carries knife. 

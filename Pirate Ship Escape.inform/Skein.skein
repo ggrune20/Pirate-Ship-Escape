@@ -20,7 +20,8 @@ You can see a Jail Door and loose floorboard here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-3047"></child>
+        <children><child nodeId="node-3474"></child>
+            <child nodeId="node-3047"></child>
             <child nodeId="node-3204"></child>
             <child nodeId="node-1853"></child>
             <child nodeId="node-1850"></child>
@@ -2895,7 +2896,74 @@ You can see a Jail Door, eyepatch and pirate coat here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-3451"></child>
+            <child nodeId="node-3478"></child>
         </children>
+    </item>
+    <item nodeId="node-3478">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.
+
+You can see Entry here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3479"></child>
+        </children>
+    </item>
+    <item nodeId="node-3479">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Bow of the Ship
+The Center deck is to the south.
+
+You can see Seamus here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3480"></child>
+        </children>
+    </item>
+    <item nodeId="node-3480">
+        <command xml:space="preserve">x seamus</command>
+        <result xml:space="preserve">the cabin boy. His stomach is growling and he is clearly very hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3481"></child>
+        </children>
+    </item>
+    <item nodeId="node-3481">
+        <command xml:space="preserve">talk to seamus</command>
+        <result xml:space="preserve">"Hi there. How are you?" you say confidently. 
+
+"Not too good. I'm really hungry." he complains. 
+
+"Are you looking for some food?" you inquire. 
+
+"I'm starving mate. If you have any food, I'd be willing to trade you my knife for it."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3482"></child>
+        </children>
+    </item>
+    <item nodeId="node-3482">
+        <command xml:space="preserve">ask about food</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3491"></child>
+        </children>
+    </item>
+    <item nodeId="node-3491">
+        <command xml:space="preserve">ask about food</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-3451">
         <command xml:space="preserve">put on eyepatch</command>
@@ -3032,7 +3100,7 @@ roof
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Cargo Hold
-A room wear there is pirate clothing and other cargo.
+A room where there is pirate clothing and other cargo. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I wouldn't recommend going into the Crew's quarters... you don't look like a pirate at all. If you want to go up, there is a small ladder you can climb to the Center Deck.
 
 You can see a Jail Door, eyepatch and pirate coat here.
 
@@ -3047,11 +3115,59 @@ You can see a Jail Door, eyepatch and pirate coat here.
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Center Deck
+As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.
+
+You can see Entry here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-3444"></child>
+            <child nodeId="node-3496"></child>
         </children>
+    </item>
+    <item nodeId="node-3496">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Bow of the Ship
+The Center deck is to the south.
+
+You can see Seamus here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3497"></child>
+        </children>
+    </item>
+    <item nodeId="node-3497">
+        <command xml:space="preserve">talk to seamus</command>
+        <result xml:space="preserve">"Hi there. How are you?" you say confidently. 
+
+"Not too good. I'm really hungry." he complains. 
+
+"Are you looking for some food?" you inquire. 
+
+"I'm starving mate. If you have any food, I'd be willing to trade you my knife for it."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3498"></child>
+        </children>
+    </item>
+    <item nodeId="node-3498">
+        <command xml:space="preserve">ask seamus about knife</command>
+        <result xml:space="preserve">"This knife can cut anything lad", a rope, a strap, you name it. I'd given the captain this knife for the food in his quarters any day but he doesn't need no knife." says Seamus.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3499"></child>
+        </children>
+    </item>
+    <item nodeId="node-3499">
+        <command xml:space="preserve">ask seamus about food</command>
+        <result xml:space="preserve">"The Captain barely feeds us. I know he has food in his quarters but I'm not allowed in there. I'm just the cabin boy." Seamus responds.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-3444">
         <command xml:space="preserve">d</command>
@@ -4113,6 +4229,13 @@ You can see a Jail Door here.
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3474">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
