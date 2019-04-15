@@ -3427,6 +3427,84 @@ roof
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3415"></child>
+        </children>
+    </item>
+    <item nodeId="node-3415">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3416"></child>
+        </children>
+    </item>
+    <item nodeId="node-3416">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Captain's Quarters
+You can see bread here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3417"></child>
+        </children>
+    </item>
+    <item nodeId="node-3417">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+roof
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3418"></child>
+        </children>
+    </item>
+    <item nodeId="node-3418">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Captain's Quarters
+You can see bread here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3419"></child>
+        </children>
+    </item>
+    <item nodeId="node-3419">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">bread: Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3420"></child>
+        </children>
+    </item>
+    <item nodeId="node-3420">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+roof
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3421"></child>
+        </children>
+    </item>
+    <item nodeId="node-3421">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3422"></child>
+        </children>
+    </item>
+    <item nodeId="node-3422">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-3257">
         <command xml:space="preserve">put on all</command>

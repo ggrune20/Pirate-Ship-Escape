@@ -5,11 +5,11 @@ say "You are a British sailor who is being held captive on a pirate ship. It is 
 
 The description of the player is "You are tall and skinny but also strong and defined from moving crates and pulling ropes on the ships you have been on throughout your life. Your skin is bronze from the sun and your face is slightly weathered from spending years at sea. You are wearing your sailors hat, a white cotton undergarment, and baige pants. The pirates took your shoes so you are barefoot."
 
-Holding Cell is a room.  
+Holding Cell is a room. The description is "The jail cell the pirates are keeping you hostage in. There is a tiny barred off window that allows you to see the full moon, the stars in the night sky, and the oil colored ocean. The floor is made out of wooden floorboards and the walls are wood as well. To the north there is an old and rusty jail door." 
 
 [first puzzle- breaking out of jail cell]
 
-The Jail Door is north of Holding Cell and south of Cargo Hold. The Jail Door is a door. The Jail door is lockable and locked. 
+The Jail Door is north of Holding Cell and south of Cargo Hold. The Jail Door is a door. The Jail door is lockable and locked. The description is "A door with metal bars keeping you caged in the holding cell. This is your only way out. It is old and rusty from the ocean's salt water. It is very weak and could possibly be pried open."
 
 [a section of the jail door is rusty and loose. you need to pry it open.]
 
@@ -71,21 +71,29 @@ wall is scenery in Center Deck.
 
 Understand "climb up [something]" as up. 
 
-Instead of climbing wall:
-	If player is in roof:
-		If the player carries the grappling hook:
-			say "You use the grappling hook to scale down the wall.";
-			move player to Center Deck;
-	If player is in Center Deck:
-		If the player carries the grappling hook:
-			say "You throw the grappling claw and it hooks onto the roof. You climb the rope.";
-			move player to roof;
-		otherwise:
-			say "I need something to help me scale this wall.".
+Instead of going up when player is in Center Deck:
+	if player is carrying hook:
+		say "You use the hook to climb up to the roof.";
+		move player to roof;
+	otherwise:
+		say "I need something to help me scale this wall.".
+		
+Instead of going down when player is in roof:
+	if player is carrying hook:
+		say "You use the hook to climb down to the ground.";
+		move player to Center Deck. 
 
-Instead of going up when the player is in Center Deck:
-	If player carries grappling hook:
-		move player to the roof.	
+Instead of climbing wall when player is in Center Deck:
+	If the player carries the grappling hook:
+		say "You use the grappling hook to scale down the wall.";
+		move player to roof;
+	otherwise:
+		say "I need something to help me scale this wall.".
+
+Instead of climbing wall when player is in roof: 
+	If the player carries the grappling hook:
+		say "You throw the grappling claw and it hooks onto the roof. You climb the rope.";
+		move player to Center Deck. 
 
 Center Deck is a room. It is above Cargo Hold. 
 
