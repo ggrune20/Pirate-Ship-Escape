@@ -4402,7 +4402,7 @@ Global lightflag = false;
 ! ListWriter.i6t: Memory
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant REQUISITION_STACK_SIZE = 3*36;
+Constant REQUISITION_STACK_SIZE = 3*37;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -9743,7 +9743,7 @@ Array property_metadata -->
     ! offset 157: property p57_recurring
     "recurring" NULL
     ! offset 159: property p59_cut
-    "cut" I146_straps NULL
+    "cut" I147_straps NULL
     ! offset 162: property vector
     "<nameless>" NULL
     ! offset 164: property room_index
@@ -10552,16 +10552,16 @@ Constant IK1_First = I125_holding_cell;
 Constant IK2_First = selfobj;
 Constant IK3_First = I51_north;
 Constant IK4_First = I126_jail_door;
-Constant IK5_First = I147_dinghy_boat;
+Constant IK5_First = I148_dinghy_boat;
 Constant IK6_First = nothing;
 Constant IK7_First = nothing;
 Constant IK8_First = selfobj;
 Constant IK9_First = nothing;
-Constant IK10_First = I144_seamus;
+Constant IK10_First = I145_seamus;
 Constant IK11_First = nothing;
 Constant IK12_First = nothing;
 Constant IK13_First = nothing;
-Constant IK14_First = I147_dinghy_boat;
+Constant IK14_First = I148_dinghy_boat;
 Constant IK15_First = nothing;
 Constant No_Directions = 12;
 ! Table of direction object alias constants:
@@ -10579,14 +10579,14 @@ Constant DirectionObject_10 = in_obj;
 Constant DirectionObject_11 = out_obj;
 Array Map_Storage -->
  I126_jail_door 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I125_holding_cell
- I131_crew_s_quarters 0 0 I126_jail_door 0 0 0 0 I133_center_deck 0 0 0 ! Exits from: I127_cargo_hold
+ I131_crew_s_quarters 0 0 I126_jail_door 0 0 0 0 I134_center_deck 0 0 0 ! Exits from: I127_cargo_hold
  0 0 0 I127_cargo_hold 0 0 0 0 0 0 0 0 ! Exits from: I131_crew_s_quarters
- I133_center_deck 0 0 0 0 0 0 0 I135_roof 0 0 0 ! Exits from: I132_captain_s_quarters
- I143_bow_of_the_ship 0 0 I132_captain_s_quarters 0 0 I140_starboard_deck I142_port_deck 0 I127_cargo_hold 0 0 ! Exits from: I133_center_deck
- 0 0 0 0 0 0 0 0 0 I132_captain_s_quarters 0 0 ! Exits from: I135_roof
- 0 0 0 0 0 0 0 I133_center_deck 0 0 0 0 ! Exits from: I140_starboard_deck
- 0 0 0 0 0 0 I133_center_deck 0 0 0 0 0 ! Exits from: I142_port_deck
- 0 0 0 I133_center_deck 0 0 0 0 0 0 0 0 ! Exits from: I143_bow_of_the_ship
+ I133_entry 0 0 0 0 0 0 0 I136_roof 0 0 0 ! Exits from: I132_captain_s_quarters
+ I144_bow_of_the_ship 0 0 I133_entry 0 0 I141_starboard_deck I143_port_deck 0 I127_cargo_hold 0 0 ! Exits from: I134_center_deck
+ 0 0 0 0 0 0 0 0 0 I132_captain_s_quarters 0 0 ! Exits from: I136_roof
+ 0 0 0 0 0 0 0 I134_center_deck 0 0 0 0 ! Exits from: I141_starboard_deck
+ 0 0 0 0 0 0 I134_center_deck 0 0 0 0 0 ! Exits from: I143_port_deck
+ 0 0 0 I134_center_deck 0 0 0 0 0 0 0 0 ! Exits from: I144_bow_of_the_ship
 ;
 
 Class VPH_Class;
@@ -11040,7 +11040,7 @@ Object selfobj ""
     with IK2_Count 0
     with IK2_Link I128_loose_floorboard
     with IK8_Count 0
-    with IK8_Link I144_seamus
+    with IK8_Link I145_seamus
     with KD_Count 8
     with parse_name Parse_Name_GV13
     with action_bitmap 0 0 0 0 0 0 
@@ -11070,16 +11070,16 @@ Object I125_holding_cell ""
 Object -> I128_loose_floorboard ""
     class K2_thing
     with short_name BC_153
+    with description BC_154
     has proper
     with vector 0
-    with cap_short_name BC_154
+    with cap_short_name BC_155
     has mark_as_thing
     with IK2_Count 2
     with IK2_Link I126_jail_door
     with KD_Count 2
     with name 'loose' 'floorboard' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_155
     with initial BC_156
     with list_together BC_157
     with plural BC_158
@@ -11110,7 +11110,7 @@ Object I126_jail_door ""
     with IK2_Count 1
     with IK2_Link I129_eyepatch
     with IK4_Count 0
-    with IK4_Link nothing
+    with IK4_Link I133_entry
     with KD_Count 4
     with name 'jail' 'door' 'doors//p' 
     with action_bitmap 0 0 0 0 0 0 
@@ -11123,6 +11123,7 @@ Object I126_jail_door ""
 Object I127_cargo_hold ""
     class K1_room
     with short_name BC_166
+    with description BC_167
     has proper
     with vector 0
     with room_index -1
@@ -11131,7 +11132,6 @@ Object I127_cargo_hold ""
     with IK1_Link I131_crew_s_quarters
     with KD_Count 1
     with name 'cargo' 'hold' 'rooms//p' 
-    with description BC_167
     with list_together BC_168
     with plural BC_169
     with article BC_170
@@ -11140,17 +11140,17 @@ Object I127_cargo_hold ""
 Object -> I129_eyepatch ""
     class K2_thing
     with short_name BC_171
+    with description BC_172
     has proper
     has clothing
     with vector 0
-    with cap_short_name BC_172
+    with cap_short_name BC_173
     has mark_as_thing
     with IK2_Count 3
     with IK2_Link I130_pirate_coat
     with KD_Count 2
     with name 'eyepatch' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_173
     with initial BC_174
     with list_together BC_175
     with plural BC_176
@@ -11160,17 +11160,17 @@ Object -> I129_eyepatch ""
 Object -> I130_pirate_coat ""
     class K2_thing
     with short_name BC_178
+    with description BC_179
     has proper
     has clothing
     with vector 0
-    with cap_short_name BC_179
+    with cap_short_name BC_180
     has mark_as_thing
     with IK2_Count 4
-    with IK2_Link I136_rope
+    with IK2_Link I137_rope
     with KD_Count 2
     with name 'pirate' 'coat' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_180
     with initial BC_181
     with list_together BC_182
     with plural BC_183
@@ -11180,6 +11180,7 @@ Object -> I130_pirate_coat ""
 Object I131_crew_s_quarters ""
     class K1_room
     with short_name BC_185
+    with description BC_186
     has proper
     with vector 0
     with room_index -1
@@ -11188,21 +11189,20 @@ Object I131_crew_s_quarters ""
     with IK1_Link I132_captain_s_quarters
     with KD_Count 1
     with name 'crew^s' 'quarters' 'rooms//p' 
-    with description BC_186
     with list_together BC_187
     with plural BC_188
     with article BC_189
 ;
 
-Object -> I136_rope ""
+Object -> I137_rope ""
     class K2_thing
     with short_name BC_190
     has proper
     with vector 0
     with cap_short_name BC_191
     has mark_as_thing
-    with IK2_Count 6
-    with IK2_Link I137_hooking_claw
+    with IK2_Count 7
+    with IK2_Link I138_hooking_claw
     with KD_Count 2
     with name 'rope' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
@@ -11213,15 +11213,15 @@ Object -> I136_rope ""
     with article BC_196
 ;
 
-Object -> I137_hooking_claw ""
+Object -> I138_hooking_claw ""
     class K2_thing
     with short_name BC_197
     has proper
     with vector 0
     with cap_short_name BC_198
     has mark_as_thing
-    with IK2_Count 7
-    with IK2_Link I134_bread
+    with IK2_Count 8
+    with IK2_Link I135_bread
     with KD_Count 2
     with name 'hooking' 'claw' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
@@ -11235,198 +11235,234 @@ Object -> I137_hooking_claw ""
 Object I132_captain_s_quarters ""
     class K1_room
     with short_name BC_204
+    with description BC_205
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 3
-    with IK1_Link I133_center_deck
+    with IK1_Link I134_center_deck
     with KD_Count 1
     with name 'captain^s' 'quarters' 'rooms//p' 
-    with description BC_205
     with list_together BC_206
     with plural BC_207
     with article BC_208
 ;
 
-Object -> I134_bread ""
+Object -> I135_bread ""
     class K2_thing
     with short_name BC_209
+    with description BC_210
     has proper
     with vector 0
-    with cap_short_name BC_210
+    with cap_short_name BC_211
     has mark_as_thing
-    with IK2_Count 5
-    with IK2_Link I139_wall
+    with IK2_Count 6
+    with IK2_Link I133_entry
     with KD_Count 2
     with name 'bread' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_211
     with initial BC_212
     with list_together BC_213
     with plural BC_214
     with article BC_215
 ;
 
-Object I133_center_deck ""
-    class K1_room
+Object I133_entry ""
+    class K4_door
     with short_name BC_216
+    with description BC_217
+    has proper
+    has lockable
+    has locked
+    with vector 0
+    with door_dir [ 
+        loc ! room of actor
+        ;
+        loc = location;
+        if (loc == thedark) loc = real_location;
+        if (loc == I132_captain_s_quarters) return I51_north; return I54_south;],
+    with door_to [ 
+        loc ! room of actor
+        ;
+        loc = location;
+        if (loc == thedark) loc = real_location;
+        if (loc == I132_captain_s_quarters) return I134_center_deck; return I132_captain_s_quarters;],
+    with found_in I132_captain_s_quarters I134_center_deck
+    has mark_as_thing
+    with IK2_Count 5
+    with IK2_Link I140_wall
+    with IK4_Count 1
+    with IK4_Link nothing
+    with KD_Count 4
+    with name 'entry' 'doors//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_218
+    with list_together BC_219
+    with plural BC_220
+    with article BC_221
+;
+
+Object I134_center_deck ""
+    class K1_room
+    with short_name BC_222
+    with description BC_223
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 4
-    with IK1_Link I135_roof
+    with IK1_Link I136_roof
     with KD_Count 1
     with name 'center' 'deck' 'rooms//p' 
-    with description BC_217
-    with list_together BC_218
-    with plural BC_219
-    with article BC_220
+    with list_together BC_224
+    with plural BC_225
+    with article BC_226
 ;
 
-Object -> I139_wall ""
+Object -> I140_wall ""
     class K2_thing
-    with short_name BC_221
+    with short_name BC_227
+    with description BC_228
     has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name BC_222
+    with cap_short_name BC_229
     has mark_as_thing
-    with IK2_Count 9
-    with IK2_Link I138_grappling_hook
+    with IK2_Count 10
+    with IK2_Link I139_grappling_hook
     with KD_Count 2
     with name 'wall' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_223
-    with initial BC_224
-    with list_together BC_225
-    with plural BC_226
-    with article BC_227
-;
-
-Object I135_roof ""
-    class K1_room
-    with short_name BC_228
-    has proper
-    with vector 0
-    with room_index -1
-    with cap_short_name BC_229
-    has mark_as_room
-    with IK1_Count 5
-    with IK1_Link I140_starboard_deck
-    with KD_Count 1
-    with name 'roof' 'rooms//p' 
-    with description BC_230
+    with initial BC_230
     with list_together BC_231
     with plural BC_232
     with article BC_233
 ;
 
-Object I138_grappling_hook ""
-    class K2_thing
+Object I136_roof ""
+    class K1_room
     with short_name BC_234
+    with description BC_235
     has proper
     with vector 0
-    with cap_short_name BC_235
+    with room_index -1
+    with cap_short_name BC_236
+    has mark_as_room
+    with IK1_Count 5
+    with IK1_Link I141_starboard_deck
+    with KD_Count 1
+    with name 'roof' 'rooms//p' 
+    with list_together BC_237
+    with plural BC_238
+    with article BC_239
+;
+
+Object I139_grappling_hook ""
+    class K2_thing
+    with short_name BC_240
+    has proper
+    with vector 0
+    with cap_short_name BC_241
     has mark_as_thing
-    with IK2_Count 8
-    with IK2_Link I141_wooden_oars
+    with IK2_Count 9
+    with IK2_Link I142_wooden_oars
     with KD_Count 2
     with name 'grappling' 'hook' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_236
-    with initial BC_237
-    with list_together BC_238
-    with plural BC_239
-    with article BC_240
+    with description BC_242
+    with initial BC_243
+    with list_together BC_244
+    with plural BC_245
+    with article BC_246
 ;
 
-Object I140_starboard_deck ""
+Object I141_starboard_deck ""
     class K1_room
-    with short_name BC_241
+    with short_name BC_247
+    with description BC_248
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 6
-    with IK1_Link I142_port_deck
+    with IK1_Link I143_port_deck
     with KD_Count 1
     with name 'starboard' 'deck' 'rooms//p' 
-    with description BC_242
-    with list_together BC_243
-    with plural BC_244
-    with article BC_245
+    with list_together BC_249
+    with plural BC_250
+    with article BC_251
 ;
 
-Object -> I141_wooden_oars ""
+Object -> I142_wooden_oars ""
     class K2_thing
-    with short_name BC_246
+    with short_name BC_252
+    with description BC_253
     has proper
     with vector 0
-    with cap_short_name BC_247
+    with cap_short_name BC_254
     has mark_as_thing
-    with IK2_Count 10
-    with IK2_Link I146_straps
+    with IK2_Count 11
+    with IK2_Link I147_straps
     with KD_Count 2
     with name 'wooden' 'oars' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_248
-    with initial BC_249
-    with list_together BC_250
-    with plural BC_251
-    with article BC_252
+    with initial BC_255
+    with list_together BC_256
+    with plural BC_257
+    with article BC_258
 ;
 
-Object I142_port_deck ""
+Object I143_port_deck ""
     class K1_room
-    with short_name BC_253
+    with short_name BC_259
+    with description BC_260
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 7
-    with IK1_Link I143_bow_of_the_ship
+    with IK1_Link I144_bow_of_the_ship
     with KD_Count 1
     with name 'port' 'deck' 'rooms//p' 
-    with description BC_254
-    with list_together BC_255
-    with plural BC_256
-    with article BC_257
+    with list_together BC_261
+    with plural BC_262
+    with article BC_263
 ;
 
-Object -> I146_straps ""
+Object -> I147_straps ""
     class K2_thing
-    with short_name BC_258
+    with short_name BC_264
+    with description BC_265
     has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name BC_259
+    with cap_short_name BC_266
     has mark_as_thing
-    with IK2_Count 13
-    with IK2_Link I147_dinghy_boat
+    with IK2_Count 14
+    with IK2_Link I148_dinghy_boat
     with KD_Count 2
     with name 'straps' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     has ~p59_cut
-    with description BC_260
-    with initial BC_261
-    with list_together BC_262
-    with plural BC_263
-    with article BC_264
+    with initial BC_267
+    with list_together BC_268
+    with plural BC_269
+    with article BC_270
 ;
 
-Object -> I147_dinghy_boat ""
+Object -> I148_dinghy_boat ""
     class K14_vehicle
-    with short_name BC_265
+    with short_name BC_271
+    with description BC_272
     has proper
     with vector 0
-    with cap_short_name BC_266
+    with cap_short_name BC_273
     has mark_as_thing
-    with IK2_Count 14
-    with IK2_Link I144_seamus
+    with IK2_Count 15
+    with IK2_Link I145_seamus
     with IK5_Count 0
     with IK5_Link nothing
     with IK14_Count 0
@@ -11434,16 +11470,16 @@ Object -> I147_dinghy_boat ""
     with KD_Count 14
     with name 'dinghy' 'boat' 'vehicles//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_267
-    with initial BC_268
-    with list_together BC_269
-    with plural BC_270
-    with article BC_271
+    with initial BC_274
+    with list_together BC_275
+    with plural BC_276
+    with article BC_277
 ;
 
-Object I143_bow_of_the_ship ""
+Object I144_bow_of_the_ship ""
     class K1_room
-    with short_name BC_272
+    with short_name BC_278
+    with description BC_279
     has proper
     with vector 0
     with room_index -1
@@ -11452,21 +11488,20 @@ Object I143_bow_of_the_ship ""
     with IK1_Link nothing
     with KD_Count 1
     with name 'bow' 'of' 'the' 'ship' 'rooms//p' 
-    with description BC_273
-    with list_together BC_274
-    with plural BC_275
-    with article BC_276
+    with list_together BC_280
+    with plural BC_281
+    with article BC_282
 ;
 
-Object -> I144_seamus ""
+Object -> I145_seamus ""
     class K10_man
-    with short_name BC_277
-    with description BC_278
+    with short_name BC_283
+    with description BC_284
     has proper
     with vector 0
     has mark_as_thing
-    with IK2_Count 11
-    with IK2_Link I145_knife
+    with IK2_Count 12
+    with IK2_Link I146_knife
     with IK8_Count 1
     with IK8_Link nothing
     with IK10_Count 0
@@ -11474,28 +11509,28 @@ Object -> I144_seamus ""
     with KD_Count 10
     with name 'seamus' 'men//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with initial BC_279
-    with list_together BC_280
-    with plural BC_281
-    with article BC_282
-;
-
-Object -> -> I145_knife ""
-    class K2_thing
-    with short_name BC_283
-    has ~static
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 12
-    with IK2_Link nothing
-    with KD_Count 2
-    with name 'knife' 'things//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_284
     with initial BC_285
     with list_together BC_286
     with plural BC_287
     with article BC_288
+;
+
+Object -> -> I146_knife ""
+    class K2_thing
+    with short_name BC_289
+    has ~static
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 13
+    with IK2_Link nothing
+    with KD_Count 2
+    with name 'knife' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_290
+    with initial BC_291
+    with list_together BC_292
+    with plural BC_293
+    with article BC_294
 ;
 
 Constant I71_german_language = 1;
@@ -11549,12 +11584,12 @@ Constant I123_masculine_gender = 2;
 Constant I124_feminine_gender = 3;
 Array Global_Vars -->
   (false) ! 7 darkness witnessed
-  (BC_289) ! 25 command prompt
+  (BC_295) ! 25 command prompt
   (I73_english_language) ! 29 language of play
-  (BC_290) ! 32 story author
-  (BC_291) ! 33 story headline
-  (BC_292) ! 34 story genre
-  (BC_293) ! 35 story description
+  (BC_296) ! 32 story author
+  (BC_297) ! 33 story headline
+  (BC_298) ! 34 story genre
+  (BC_299) ! 35 story description
   (1) ! 36 release number
   (0) ! 37 story creation year
   (0) ! 45 locale paragraph count
@@ -11570,14 +11605,14 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0664 0 (BC_294) (BC_295) (BC_296) (BC_297) (BC_298) ;
+Array tab_0_0 table $0664 0 (BC_300) (BC_301) (BC_302) (BC_303) (BC_304) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
 Array tab_0_2 table $2066 2 (Consult_Grammar_96) (Consult_Grammar_97) (Consult_Grammar_98) (Consult_Grammar_99) (Consult_Grammar_100) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4 ( TABLE_NOVALUE) ( TABLE_NOVALUE) (V27_amusing_a_victorious_pla) ( TABLE_NOVALUE) ( TABLE_NOVALUE) ;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -11587,7 +11622,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $ff $ff  ! Column 1
+  $ff $ff $01  ! Column 1
   
   ! End of table
   NULL NULL;
@@ -12388,11 +12423,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
                 say__p=1;! [6: ~you were able to sneak into the Crew's Quarters unnoticed.~]
                 ParaContent(); print "you were able to sneak into the Crew's Quarters unnoticed."; new_line; .L_Say3; .L_SayX3;} else {
                 ! [7: end the story finally saying ~A pirate noticed you and you were caught. You Lose.~]
-                deadflag=TX_L_79; story_complete=true;
+                deadflag=TX_L_97; story_complete=true;
                 }
                 } else {
             ! [8: end the story finally saying ~A pirate noticed you and you were caught. You Lose.~]
-            deadflag=TX_L_79; story_complete=true;
+            deadflag=TX_L_97; story_complete=true;
             }
             }
             rfalse;
@@ -12402,9 +12437,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ R_812 ;
     if (debug_rules) DB_Rule(R_812, 812);
     ! [2: if player is in dinghy boat]
-    if (((I147_dinghy_boat == ContainerOf(player))))
+    if (((I148_dinghy_boat == ContainerOf(player))))
     {! [3: end the story finally saying ~You escaped the pirate ship! You win!~]
-        deadflag=TX_L_80; story_complete=true;
+        deadflag=TX_L_98; story_complete=true;
         }
         rfalse;
 ];
@@ -12854,15 +12889,15 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of going up when player is in Center Deck:
 [ R_804 ;
-    if ((((action ==##Go) &&  (actor==player) && ((noun == I59_up) && (true)) && (self=actor,true) && (((I133_center_deck == ContainerOf(player))))))) { ! Runs only when pattern matches
+    if ((((action ==##Go) &&  (actor==player) && ((noun == I59_up) && (true)) && (self=actor,true) && (((I134_center_deck == ContainerOf(player))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_804, 804);
     ! [2: if player is carrying hook]
-    if (((player == CarrierOf(I138_grappling_hook))))
+    if (((player == CarrierOf(I139_grappling_hook))))
     {! [3: say ~You use the hook to climb up to the roof.~]
         say__p=1;! [4: ~You use the hook to climb up to the roof.~]
         ParaContent(); print "You use the hook to climb up to the roof."; new_line; .L_Say5; .L_SayX5;! [5: move player to roof]
-        MoveObject(player, I135_roof, 0, false);
+        MoveObject(player, I136_roof, 0, false);
         } else {
         ! [6: say ~I need something to help me scale this wall.~]
         say__p=1;! [7: ~I need something to help me scale this wall.~]
@@ -12874,15 +12909,15 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of going down when player is in roof:
 [ R_805 ;
-    if ((((action ==##Go) &&  (actor==player) && ((noun == I60_down) && (true)) && (self=actor,true) && (((I135_roof == ContainerOf(player))))))) { ! Runs only when pattern matches
+    if ((((action ==##Go) &&  (actor==player) && ((noun == I60_down) && (true)) && (self=actor,true) && (((I136_roof == ContainerOf(player))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_805, 805);
     ! [2: if player is carrying hook]
-    if (((player == CarrierOf(I138_grappling_hook))))
+    if (((player == CarrierOf(I139_grappling_hook))))
     {! [3: say ~You use the hook to climb down to the ground.~]
         say__p=1;! [4: ~You use the hook to climb down to the ground.~]
         ParaContent(); print "You use the hook to climb down to the ground."; new_line; .L_Say7; .L_SayX7;! [5: move player to center deck]
-        MoveObject(player, I133_center_deck, 0, false);
+        MoveObject(player, I134_center_deck, 0, false);
         }
         RulebookFails(); rtrue;
         } else if (debug_rules > 1) DB_Rule(R_805, 805, 'action');
@@ -12891,15 +12926,15 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of climbing wall when player is in Center Deck:
 [ R_806 ;
-    if ((((action ==##Climb) &&  (actor==player) && ((noun == I139_wall) && (true)) && (self=actor,true) && (((I133_center_deck == ContainerOf(player))))))) { ! Runs only when pattern matches
+    if ((((action ==##Climb) &&  (actor==player) && ((noun == I140_wall) && (true)) && (self=actor,true) && (((I134_center_deck == ContainerOf(player))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_806, 806);
     ! [2: if the player carries the grappling hook]
-    if (((player == CarrierOf(I138_grappling_hook))))
+    if (((player == CarrierOf(I139_grappling_hook))))
     {! [3: say ~You use the grappling hook to scale down the wall.~]
         say__p=1;! [4: ~You use the grappling hook to scale down the wall.~]
         ParaContent(); print "You use the grappling hook to scale down the wall."; new_line; .L_Say8; .L_SayX8;! [5: move player to roof]
-        MoveObject(player, I135_roof, 0, false);
+        MoveObject(player, I136_roof, 0, false);
         } else {
         ! [6: say ~I need something to help me scale this wall.~]
         say__p=1;! [7: ~I need something to help me scale this wall.~]
@@ -12911,15 +12946,15 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of climbing wall when player is in roof:
 [ R_807 ;
-    if ((((action ==##Climb) &&  (actor==player) && ((noun == I139_wall) && (true)) && (self=actor,true) && (((I135_roof == ContainerOf(player))))))) { ! Runs only when pattern matches
+    if ((((action ==##Climb) &&  (actor==player) && ((noun == I140_wall) && (true)) && (self=actor,true) && (((I136_roof == ContainerOf(player))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_807, 807);
     ! [2: if the player carries the grappling hook]
-    if (((player == CarrierOf(I138_grappling_hook))))
+    if (((player == CarrierOf(I139_grappling_hook))))
     {! [3: say ~You throw the grappling claw and it hooks onto the roof. You climb the rope.~]
         say__p=1;! [4: ~You throw the grappling claw and it hooks onto the roof. You climb the rope.~]
         ParaContent(); print "You throw the grappling claw and it hooks onto the roof. You climb the rope."; new_line; .L_Say10; .L_SayX10;! [5: move player to center deck]
-        MoveObject(player, I133_center_deck, 0, false);
+        MoveObject(player, I134_center_deck, 0, false);
         }
         RulebookFails(); rtrue;
         } else if (debug_rules > 1) DB_Rule(R_807, 807, 'action');
@@ -12942,13 +12977,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of combining rope with hooking claw:
 [ R_802 ;
-    if ((((action ==##A78_combining_it_with) &&  (actor==player) && ((noun == I136_rope) && (true)) && ((second == I137_hooking_claw) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A78_combining_it_with) &&  (actor==player) && ((noun == I137_rope) && (true)) && ((second == I138_hooking_claw) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_802, 802);
     ! [2: say ~you now have a grappling hook.~]
     say__p=1;! [3: ~you now have a grappling hook.~]
     ParaContent(); print "you now have a grappling hook."; new_line; .L_Say12; .L_SayX12;! [4: move grappling hook to player]
-    MoveObject(I138_grappling_hook, player, 0, false);
+    MoveObject(I139_grappling_hook, player, 0, false);
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_802, 802, 'action');
     rfalse;
@@ -12956,13 +12991,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of combining hooking claw with rope:
 [ R_803 ;
-    if ((((action ==##A78_combining_it_with) &&  (actor==player) && ((noun == I137_hooking_claw) && (true)) && ((second == I136_rope) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A78_combining_it_with) &&  (actor==player) && ((noun == I138_hooking_claw) && (true)) && ((second == I137_rope) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_803, 803);
     ! [2: say ~you now have a grappling hook.~]
     say__p=1;! [3: ~you now have a grappling hook.~]
     ParaContent(); print "you now have a grappling hook."; new_line; .L_Say13; .L_SayX13;! [4: move grappling hook to player]
-    MoveObject(I138_grappling_hook, player, 0, false);
+    MoveObject(I139_grappling_hook, player, 0, false);
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_803, 803, 'action');
     rfalse;
@@ -12970,13 +13005,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of giving bread to Seamus:
 [ R_808 ;
-    if ((((action ==##Give) &&  (actor==player) && ((noun == I134_bread) && (true)) && ((second == I144_seamus) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##Give) &&  (actor==player) && ((noun == I135_bread) && (true)) && ((second == I145_seamus) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_808, 808);
     ! [2: say ~Seamus is pleased. He gives you the knife.~]
     say__p=1;! [3: ~Seamus is pleased. He gives you the knife.~]
     ParaContent(); print "Seamus is pleased. He gives you the knife."; new_line; .L_Say14; .L_SayX14;! [4: now player carries knife]
-    MoveObject(I145_knife,player);
+    MoveObject(I146_knife,player);
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_808, 808, 'action');
     rfalse;
@@ -12984,7 +13019,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of cutting straps with knife:
 [ R_809 ;
-    if ((((action ==##A79_cutting_it_with) &&  (actor==player) && ((noun == I146_straps) && (true)) && ((second == I145_knife) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A79_cutting_it_with) &&  (actor==player) && ((noun == I147_straps) && (true)) && ((second == I146_knife) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_809, 809);
     ! [2: if oarsattached is 1]
@@ -12992,7 +13027,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: say ~the boat drops down into the water. Jump in the dinghy boat before it floats away.~]
         say__p=1;! [4: ~the boat drops down into the water. Jump in the dinghy boat before it floats away.~]
         ParaContent(); print "the boat drops down into the water. Jump in the dinghy boat before it floats away."; new_line; .L_Say15; .L_SayX15;! [5: now straps is cut]
-        (Adj_86_t2_v10(I146_straps));
+        (Adj_86_t2_v10(I147_straps));
         } else {
         ! [6: say ~try connecting the oars to the dinghy boat first.~]
         say__p=1;! [7: ~try connecting the oars to the dinghy boat first.~]
@@ -13004,7 +13039,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of connecting wooden oars to dinghy boat:
 [ R_810 ;
-    if ((((action ==##A80_connecting_it_to) &&  (actor==player) && ((noun == I141_wooden_oars) && (true)) && ((second == I147_dinghy_boat) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A80_connecting_it_to) &&  (actor==player) && ((noun == I142_wooden_oars) && (true)) && ((second == I148_dinghy_boat) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_810, 810);
     ! [2: say ~you attach the wooden oars to the dinghy boat~]
@@ -13012,7 +13047,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
     ParaContent(); print "you attach the wooden oars to the dinghy boat"; .L_Say17; .L_SayX17;! [4: now oarsattached is 1]
     (Global_Vars-->10) = 1;
     ! [5: remove wooden oars from play]
-    RemoveFromPlay(I141_wooden_oars);
+    RemoveFromPlay(I142_wooden_oars);
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_810, 810, 'action');
     rfalse;
@@ -13020,7 +13055,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of entering dinghy boat:
 [ R_811 ;
-    if ((((action ==##Enter) &&  (actor==player) && ((noun == I147_dinghy_boat) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##Enter) &&  (actor==player) && ((noun == I148_dinghy_boat) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_811, 811);
     ! [2: if oarsattached is 1]
@@ -13028,9 +13063,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: say ~Now that the oars are attached to the dinghy boat. Try lowering it into the ocean.~]
         say__p=1;! [4: ~Now that the oars are attached to the dinghy boat. Try lowering it into the ocean.~]
         ParaContent(); print "Now that the oars are attached to the dinghy boat. Try lowering it into the ocean."; new_line; .L_Say18; .L_SayX18;! [5: if straps is cut]
-        if ((((Adj_86_t1_v10(I146_straps)))))
+        if ((((Adj_86_t1_v10(I147_straps)))))
         {! [6: end the story finally saying ~You jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win!~]
-            deadflag=TX_L_81; story_complete=true;
+            deadflag=TX_L_99; story_complete=true;
             }
             } else {
         ! [7: say ~You should drop the dinghy boat into the ocean before you get into it.~]
@@ -28668,7 +28703,7 @@ Constant SLOW_ROUTE_FINDING;
 ! Relations.i6t: Cache Control
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant NUM_DOORS = 1;
+Constant NUM_DOORS = 2;
 Constant NUM_ROOMS = 9;
 
 Array DoorRoutingViable -> NUM_DOORS+1;
@@ -28871,7 +28906,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ! Relations.i6t: Relation Route-Finding
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant MAX_ROUTE_LENGTH = 36 + 32;
+Constant MAX_ROUTE_LENGTH = 37 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -36918,7 +36953,7 @@ if (t_0 ofclass K13_device) {if (na > 0) { na = 0; print "; "; }
     if ((AllowInShowme(on)) && (t_0  has on)) { if (na++ > 0) print ", "; print "switched on"; }
     if ((AllowInShowme(on)) && (t_0  hasnt on)) { if (na++ > 0) print ", "; print "switched off"; }
 }
-if (t_0 == I146_straps) {if (na > 0) { na = 0; print "; "; }
+if (t_0 == I147_straps) {if (na > 0) { na = 0; print "; "; }
     if ((AllowInShowme(p59_cut)) && (t_0  has p59_cut)) { if (na++ > 0) print ", "; print "cut"; }
     if ((AllowInShowme(p59_cut)) && (t_0  hasnt p59_cut)) { if (na++ > 0) print ", "; print "uncut"; }
 }
@@ -49681,6 +49716,7 @@ Verb 'notify'
 ;
 Verb 'pry'
     * noun 'with' noun  -> A77_prying_it_with
+    * 'open' noun 'with' noun  -> A77_prying_it_with
 ;
 Verb 'combine'
     * noun 'with' noun  -> A78_combining_it_with
@@ -49720,88 +49756,106 @@ Verb 'connect'
 
 
 
-Constant TX_PS_72 = ">";
-Constant TX_PS_39 = "A door with metal bars keeping you caged in the holding cell. This is your only way out. It is old and rusty from the ocean's salt water. It is very weak and could possibly be pried open.";
-Constant TX_PS_79 = "A pirate noticed you and you were caught. You Lose.";
-Array TX_L_79 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_79;
+Constant TX_PS_90 = ">";
+Constant TX_PS_40 = "A door with metal bars keeping you caged in the holding cell. This is your only way out. It is old and rusty from the ocean's salt water. It is very weak and could possibly be pried open.";
+Constant TX_PS_61 = "A large wooden door with intricate designs of skulls and crossbones. It is locked shut. There must be another way to get into the Captain's Quarters.";
+Constant TX_PS_97 = "A pirate noticed you and you were caught. You Lose.";
+Array TX_L_97 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_97;
+Constant TX_PS_42 = "A room where there is pirate clothing and other cargo. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I wouldn't recommend going into the Crew's quarters... you don't look like a pirate at all. If you want to go up, there is a small ladder you can climb to the Center Deck.";
 Constant TX_PS_3 = "An Interactive Fiction";
-Constant TX_PS_68 = "Bow of the Ship";
-Constant TX_PS_52 = "Bread";
-Constant TX_PS_50 = "Captain's Quarters";
-Constant TX_PS_40 = "Cargo Hold";
-Constant TX_PS_53 = "Center Deck";
-Constant TX_PS_45 = "Crew's Quarters";
-Constant TX_PS_67 = "Dinghy boat";
-Constant TX_PS_42 = "Eyepatch";
-Constant TX_PS_73 = "Fiction";
-Constant TX_PS_59 = "Grappling hook";
+Constant TX_PS_63 = "As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.";
+Constant TX_PS_85 = "Bow of the Ship";
+Constant TX_PS_59 = "Bread";
+Constant TX_PS_55 = "Captain's Quarters";
+Constant TX_PS_41 = "Cargo Hold";
+Constant TX_PS_62 = "Center Deck";
+Constant TX_PS_49 = "Crew's Quarters";
+Constant TX_PS_84 = "Dinghy boat";
+Constant TX_PS_60 = "Entry";
+Constant TX_PS_45 = "Eyepatch";
+Constant TX_PS_91 = "Fiction";
+Constant TX_PS_71 = "Grappling hook";
 Constant TX_PS_34 = "Holding Cell";
-Constant TX_PS_49 = "Hooking claw";
-Constant TX_PS_38 = "Jail Door";
-Constant TX_PS_37 = "Loose floorboard";
+Constant TX_PS_54 = "Hooking claw";
+Constant TX_PS_39 = "Jail Door";
+Constant TX_PS_38 = "Loose floorboard";
 Constant TX_PS_2 = "Pirate Ship Escape";
-Constant TX_PS_44 = "Pirate coat";
-Constant TX_PS_63 = "Port Deck";
-Constant TX_PS_77 = "QUIT";
-Constant TX_PS_74 = "RESTART";
-Constant TX_PS_75 = "RESTORE a saved game";
-Constant TX_PS_57 = "Roof";
-Constant TX_PS_47 = "Rope";
-Constant TX_PS_69 = "Seamus";
-Constant TX_PS_60 = "Starboard Deck";
-Constant TX_PS_65 = "Straps";
+Constant TX_PS_48 = "Pirate coat";
+Constant TX_PS_77 = "Port Deck";
+Constant TX_PS_95 = "QUIT";
+Constant TX_PS_92 = "RESTART";
+Constant TX_PS_93 = "RESTORE a saved game";
+Constant TX_PS_69 = "Roof";
+Constant TX_PS_52 = "Rope";
+Constant TX_PS_87 = "Seamus";
+Constant TX_PS_72 = "Starboard Deck";
+Constant TX_PS_81 = "Straps";
+Constant TX_PS_78 = "The Center deck is to the east.";
+Constant TX_PS_86 = "The Center deck is to the south.";
+Constant TX_PS_73 = "The Center deck is to the west.";
 Constant TX_PS_35 = "The jail cell the pirates are keeping you hostage in. There is a tiny barred off window that allows you to see the full moon, the stars in the night sky, and the oil colored ocean. The floor is made out of wooden floorboards and the walls are wood as well. To the north there is an old and rusty jail door.";
-Constant TX_PS_78 = "UNDO the last command";
-Constant TX_PS_55 = "Wall";
-Constant TX_PS_62 = "Wooden oars";
+Constant TX_PS_56 = "The place where the Captain lives when he is not on the deck bossing his crew around.";
+Constant TX_PS_50 = "This is the place where the pirates sleep at night and relax when they can. The Cargo Hold is to the south.";
+Constant TX_PS_96 = "UNDO the last command";
+Constant TX_PS_66 = "Wall";
+Constant TX_PS_76 = "Wooden oars";
+Constant TX_PS_68 = "You are now above the Captain's Quarters and there is an open hatch that you can go down. From up here you can also climb the wall back down to the Center Deck.";
 Constant TX_PS_32 = "You are tall and skinny but also strong and defined from moving crates and pulling ropes on the ships you have been on throughout your life. Your skin is bronze from the sun and your face is slightly weathered from spending years at sea. You are wearing your sailors hat, a white cotton undergarment, and baige pants. The pirates took your shoes so you are barefoot.";
-Constant TX_PS_80 = "You escaped the pirate ship! You win!";
-Array TX_L_80 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_80;
-Constant TX_PS_81 = "You jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win!";
-Array TX_L_81 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_81;
+Constant TX_PS_98 = "You escaped the pirate ship! You win!";
+Array TX_L_98 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_98;
+Constant TX_PS_99 = "You jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win!";
+Array TX_L_99 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_99;
 Constant TX_PS_33 = "Yourself";
+Constant TX_PS_44 = "a small patch of leather and string meant to be worn in front of the eye.";
+Constant TX_PS_37 = "a two by four plank of hard and very sturdy wood.";
+Constant TX_PS_65 = "a wall that leads to the roof of the Captain's Quarters if you can manage to climb it.";
+Constant TX_PS_83 = "a watercraft that you can possibly use to escape from the pirate ship.";
+Constant TX_PS_47 = "an item of pirate clothing. A coat you usually wear over a shirt.";
 Constant TX_PS_9 = "animals";
 Constant TX_PS_14 = "backdrops";
-Constant TX_PS_51 = "bread";
+Constant TX_PS_57 = "bread";
 Constant TX_PS_11 = "containers";
 Constant TX_PS_15 = "devices";
-Constant TX_PS_66 = "dinghy boat";
+Constant TX_PS_82 = "dinghy boat";
 Constant TX_PS_17 = "directions";
 Constant TX_PS_10 = "doors";
 Constant TX_PS_28 = "down";
 Constant TX_PS_25 = "east";
-Constant TX_PS_41 = "eyepatch";
+Constant TX_PS_43 = "eyepatch";
 Constant TX_PS_4 = "ggrune20";
-Constant TX_PS_58 = "grappling hook";
-Constant TX_PS_48 = "hooking claw";
+Constant TX_PS_70 = "grappling hook";
+Constant TX_PS_58 = "great food for when you are hungry.";
+Constant TX_PS_53 = "hooking claw";
 Constant TX_PS_29 = "inside";
-Constant TX_PS_71 = "knife";
+Constant TX_PS_89 = "knife";
 Constant TX_PS_36 = "loose floorboard";
 Constant TX_PS_7 = "men";
 Constant TX_PS_18 = "north";
 Constant TX_PS_20 = "northeast";
 Constant TX_PS_21 = "northwest";
+Constant TX_PS_75 = "oars that can be attached to a boat.";
 Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
-Constant TX_PS_43 = "pirate coat";
+Constant TX_PS_46 = "pirate coat";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_56 = "roof";
-Constant TX_PS_46 = "rope";
-Constant TX_PS_76 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_67 = "roof";
+Constant TX_PS_51 = "rope";
+Constant TX_PS_94 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
 Constant TX_PS_24 = "southwest";
-Constant TX_PS_64 = "straps";
+Constant TX_PS_80 = "straps that are holding the dinghy boat above the water. Maybe they can be cut with something sharp to drop it into the ocean.";
+Constant TX_PS_79 = "straps";
 Constant TX_PS_5 = "supporters";
-Constant TX_PS_70 = "the cabin boy.";
+Constant TX_PS_88 = "the cabin boy. His stomach is growling and he is clearly very hungry.";
 Constant TX_PS_19 = "the";
 Constant TX_PS_27 = "up";
 Constant TX_PS_12 = "vehicles";
-Constant TX_PS_54 = "wall";
+Constant TX_PS_64 = "wall";
 Constant TX_PS_26 = "west";
 Constant TX_PS_8 = "women";
-Constant TX_PS_61 = "wooden oars";
+Constant TX_PS_74 = "wooden oars";
 Constant TX_PS_31 = "yourself";
 Array TX_L_31 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_31;
 
@@ -57113,150 +57167,156 @@ Array BC_151 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_152 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_153 --> PACKED_TEXT_STORAGE TX_PS_36;
 Array BC_154 --> PACKED_TEXT_STORAGE TX_PS_37;
-Array BC_155 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_155 --> PACKED_TEXT_STORAGE TX_PS_38;
 Array BC_156 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_157 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_158 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_159 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_160 --> PACKED_TEXT_STORAGE TX_PS_38;
-Array BC_161 --> PACKED_TEXT_STORAGE TX_PS_39;
+Array BC_160 --> PACKED_TEXT_STORAGE TX_PS_39;
+Array BC_161 --> PACKED_TEXT_STORAGE TX_PS_40;
 Array BC_162 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_163 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_164 --> PACKED_TEXT_STORAGE TX_PS_10;
 Array BC_165 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_166 --> PACKED_TEXT_STORAGE TX_PS_40;
-Array BC_167 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_166 --> PACKED_TEXT_STORAGE TX_PS_41;
+Array BC_167 --> PACKED_TEXT_STORAGE TX_PS_42;
 Array BC_168 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_169 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_170 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_171 --> PACKED_TEXT_STORAGE TX_PS_41;
-Array BC_172 --> PACKED_TEXT_STORAGE TX_PS_42;
-Array BC_173 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_171 --> PACKED_TEXT_STORAGE TX_PS_43;
+Array BC_172 --> PACKED_TEXT_STORAGE TX_PS_44;
+Array BC_173 --> PACKED_TEXT_STORAGE TX_PS_45;
 Array BC_174 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_175 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_176 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_177 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_178 --> PACKED_TEXT_STORAGE TX_PS_43;
-Array BC_179 --> PACKED_TEXT_STORAGE TX_PS_44;
-Array BC_180 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_178 --> PACKED_TEXT_STORAGE TX_PS_46;
+Array BC_179 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_180 --> PACKED_TEXT_STORAGE TX_PS_48;
 Array BC_181 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_182 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_183 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_184 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_185 --> PACKED_TEXT_STORAGE TX_PS_45;
-Array BC_186 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_185 --> PACKED_TEXT_STORAGE TX_PS_49;
+Array BC_186 --> PACKED_TEXT_STORAGE TX_PS_50;
 Array BC_187 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_188 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_189 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_190 --> PACKED_TEXT_STORAGE TX_PS_46;
-Array BC_191 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_190 --> PACKED_TEXT_STORAGE TX_PS_51;
+Array BC_191 --> PACKED_TEXT_STORAGE TX_PS_52;
 Array BC_192 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_193 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_194 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_195 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_196 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_197 --> PACKED_TEXT_STORAGE TX_PS_48;
-Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_49;
+Array BC_197 --> PACKED_TEXT_STORAGE TX_PS_53;
+Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_54;
 Array BC_199 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_200 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_201 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_202 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_203 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_204 --> PACKED_TEXT_STORAGE TX_PS_50;
-Array BC_205 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_204 --> PACKED_TEXT_STORAGE TX_PS_55;
+Array BC_205 --> PACKED_TEXT_STORAGE TX_PS_56;
 Array BC_206 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_207 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_208 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_209 --> PACKED_TEXT_STORAGE TX_PS_51;
-Array BC_210 --> PACKED_TEXT_STORAGE TX_PS_52;
-Array BC_211 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_209 --> PACKED_TEXT_STORAGE TX_PS_57;
+Array BC_210 --> PACKED_TEXT_STORAGE TX_PS_58;
+Array BC_211 --> PACKED_TEXT_STORAGE TX_PS_59;
 Array BC_212 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_213 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_214 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_215 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_216 --> PACKED_TEXT_STORAGE TX_PS_53;
-Array BC_217 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_216 --> PACKED_TEXT_STORAGE TX_PS_60;
+Array BC_217 --> PACKED_TEXT_STORAGE TX_PS_61;
 Array BC_218 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_219 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_220 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_221 --> PACKED_TEXT_STORAGE TX_PS_54;
-Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_55;
-Array BC_223 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_220 --> PACKED_TEXT_STORAGE TX_PS_10;
+Array BC_221 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_62;
+Array BC_223 --> PACKED_TEXT_STORAGE TX_PS_63;
 Array BC_224 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_225 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_226 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_227 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_228 --> PACKED_TEXT_STORAGE TX_PS_56;
-Array BC_229 --> PACKED_TEXT_STORAGE TX_PS_57;
+Array BC_227 --> PACKED_TEXT_STORAGE TX_PS_64;
+Array BC_228 --> PACKED_TEXT_STORAGE TX_PS_65;
+Array BC_229 --> PACKED_TEXT_STORAGE TX_PS_66;
 Array BC_230 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_231 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_232 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_233 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_234 --> PACKED_TEXT_STORAGE TX_PS_58;
-Array BC_235 --> PACKED_TEXT_STORAGE TX_PS_59;
-Array BC_236 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_234 --> PACKED_TEXT_STORAGE TX_PS_67;
+Array BC_235 --> PACKED_TEXT_STORAGE TX_PS_68;
+Array BC_236 --> PACKED_TEXT_STORAGE TX_PS_69;
 Array BC_237 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_238 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_239 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_240 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_241 --> PACKED_TEXT_STORAGE TX_PS_60;
+Array BC_240 --> PACKED_TEXT_STORAGE TX_PS_70;
+Array BC_241 --> PACKED_TEXT_STORAGE TX_PS_71;
 Array BC_242 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_243 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_244 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_245 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_246 --> PACKED_TEXT_STORAGE TX_PS_61;
-Array BC_247 --> PACKED_TEXT_STORAGE TX_PS_62;
-Array BC_248 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_246 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_247 --> PACKED_TEXT_STORAGE TX_PS_72;
+Array BC_248 --> PACKED_TEXT_STORAGE TX_PS_73;
 Array BC_249 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_250 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_251 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_252 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_253 --> PACKED_TEXT_STORAGE TX_PS_63;
-Array BC_254 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_252 --> PACKED_TEXT_STORAGE TX_PS_74;
+Array BC_253 --> PACKED_TEXT_STORAGE TX_PS_75;
+Array BC_254 --> PACKED_TEXT_STORAGE TX_PS_76;
 Array BC_255 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_256 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_257 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_258 --> PACKED_TEXT_STORAGE TX_PS_64;
-Array BC_259 --> PACKED_TEXT_STORAGE TX_PS_65;
-Array BC_260 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_258 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_259 --> PACKED_TEXT_STORAGE TX_PS_77;
+Array BC_260 --> PACKED_TEXT_STORAGE TX_PS_78;
 Array BC_261 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_262 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_263 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_264 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_265 --> PACKED_TEXT_STORAGE TX_PS_66;
-Array BC_266 --> PACKED_TEXT_STORAGE TX_PS_67;
+Array BC_264 --> PACKED_TEXT_STORAGE TX_PS_79;
+Array BC_265 --> PACKED_TEXT_STORAGE TX_PS_80;
+Array BC_266 --> PACKED_TEXT_STORAGE TX_PS_81;
 Array BC_267 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_268 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_269 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_270 --> PACKED_TEXT_STORAGE TX_PS_12;
-Array BC_271 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_272 --> PACKED_TEXT_STORAGE TX_PS_68;
-Array BC_273 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_270 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_271 --> PACKED_TEXT_STORAGE TX_PS_82;
+Array BC_272 --> PACKED_TEXT_STORAGE TX_PS_83;
+Array BC_273 --> PACKED_TEXT_STORAGE TX_PS_84;
 Array BC_274 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_275 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_276 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_277 --> PACKED_TEXT_STORAGE TX_PS_69;
-Array BC_278 --> PACKED_TEXT_STORAGE TX_PS_70;
-Array BC_279 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_276 --> PACKED_TEXT_STORAGE TX_PS_12;
+Array BC_277 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_278 --> PACKED_TEXT_STORAGE TX_PS_85;
+Array BC_279 --> PACKED_TEXT_STORAGE TX_PS_86;
 Array BC_280 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_281 --> PACKED_TEXT_STORAGE TX_PS_7;
+Array BC_281 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_282 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_283 --> PACKED_TEXT_STORAGE TX_PS_71;
-Array BC_284 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_283 --> PACKED_TEXT_STORAGE TX_PS_87;
+Array BC_284 --> PACKED_TEXT_STORAGE TX_PS_88;
 Array BC_285 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_286 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_287 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_287 --> PACKED_TEXT_STORAGE TX_PS_7;
 Array BC_288 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_289 --> PACKED_TEXT_STORAGE TX_PS_72;
-Array BC_290 --> PACKED_TEXT_STORAGE TX_PS_4;
-Array BC_291 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_292 --> PACKED_TEXT_STORAGE TX_PS_73;
+Array BC_289 --> PACKED_TEXT_STORAGE TX_PS_89;
+Array BC_290 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_291 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_292 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_293 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_294 --> PACKED_TEXT_STORAGE TX_PS_74;
-Array BC_295 --> PACKED_TEXT_STORAGE TX_PS_75;
-Array BC_296 --> PACKED_TEXT_STORAGE TX_PS_76;
-Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_77;
-Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_78;
+Array BC_294 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_295 --> PACKED_TEXT_STORAGE TX_PS_90;
+Array BC_296 --> PACKED_TEXT_STORAGE TX_PS_4;
+Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_3;
+Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_91;
+Array BC_299 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_300 --> PACKED_TEXT_STORAGE TX_PS_92;
+Array BC_301 --> PACKED_TEXT_STORAGE TX_PS_93;
+Array BC_302 --> PACKED_TEXT_STORAGE TX_PS_94;
+Array BC_303 --> PACKED_TEXT_STORAGE TX_PS_95;
+Array BC_304 --> PACKED_TEXT_STORAGE TX_PS_96;
 
 
 

@@ -13,23 +13,25 @@ The Jail Door is north of Holding Cell and south of Cargo Hold. The Jail Door is
 
 [a section of the jail door is rusty and loose. you need to pry it open.]
 
-loose floorboard is an object. It is in Holding Cell. 
+loose floorboard is an object. It is in Holding Cell. The description is "a two by four plank of hard and very sturdy wood."
 
 [you need to break off the loose floorboard]
 
 Understand "pry [something] with [something]" as prying it with. prying it with is an action applying to two things. 
 
+Understand "pry open [something] with [something]" as prying it with. 
+
 Instead of prying the jail door with loose floorboard:
 	say "you break open the jail door. North towards the cargo hold is the only way you can go.";
 	now the jail door is open. 
 
-Cargo Hold is a room. 
+Cargo Hold is a room. The description is "A room where there is pirate clothing and other cargo. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I wouldn't recommend going into the Crew's quarters... you don't look like a pirate at all. If you want to go up, there is a small ladder you can climb to the Center Deck."
 
-eyepatch is an object. It is in Cargo Hold. It is wearable. 
+eyepatch is an object. It is in Cargo Hold. It is wearable. The description is "a small patch of leather and string meant to be worn in front of the eye."
 
-pirate coat is an object. It is in Cargo Hold. It is wearable. 
+pirate coat is an object. It is in Cargo Hold. It is wearable. The description is "an item of pirate clothing. A coat you usually wear over a shirt."
 
-Crew's Quarters is a room. It is north of Cargo Hold. 
+Crew's Quarters is a room. It is north of Cargo Hold. "This is the place where the pirates sleep at night and relax when they can. The Cargo Hold is to the south."
 
 An every turn rule:
 	If player is in Crew's Quarters:
@@ -43,13 +45,13 @@ An every turn rule:
 
 [player needs to wear pirate clothing to get into crew's quarters]
 
-Captain's Quarters is a room. It is south of Center Deck. 
+Captain's Quarters is a room. The description is "The place where the Captain lives when he is not on the deck bossing his crew around."
 
-[locked door]
+Entry is north of Captain's Quarters and south of Center Deck. Entry is a door. Entry is lockable and locked. The description is "A large wooden door with intricate designs of skulls and crossbones. It is locked shut. There must be another way to get into the Captain's Quarters."
 
-bread is an object. It is in Captain's Quarters.
+bread is an object. It is in Captain's Quarters. The description is "great food for when you are hungry."
 
-roof is a room. It is above Captain's Quarters. 
+roof is a room. It is above Captain's Quarters. The description is "You are now above the Captain's Quarters and there is an open hatch that you can go down. From up here you can also climb the wall back down to the Center Deck."
 
 rope is an object. It is in Crew's Quarters. 
 
@@ -67,7 +69,7 @@ Instead of combining hooking claw with rope:
 	say "you now have a grappling hook.";
 	move grappling hook to player.
 
-wall is scenery in Center Deck. 
+wall is scenery in Center Deck. The description is "a wall that leads to the roof of the Captain's Quarters if you can manage to climb it."
 
 Understand "climb up [something]" as up. 
 
@@ -95,17 +97,17 @@ Instead of climbing wall when player is in roof:
 		say "You throw the grappling claw and it hooks onto the roof. You climb the rope.";
 		move player to Center Deck. 
 
-Center Deck is a room. It is above Cargo Hold. 
+Center Deck is a room. It is above Cargo Hold. The description is "As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you."
 
-Starboard Deck is a room. It is east of Center Deck. 
+Starboard Deck is a room. It is east of Center Deck. The description is "The Center deck is to the west."
 
-wooden oars is an object. It is in Starboard Deck.
+wooden oars is an object. It is in Starboard Deck. The description is "oars that can be attached to a boat."
 
-Port Deck is a room. It is west of Center Deck. 
+Port Deck is a room. It is west of Center Deck. The description is "The Center deck is to the east."
 
-Bow of the Ship is a room. It is north of Center Deck. 
+Bow of the Ship is a room. It is north of Center Deck. The description is "The Center deck is to the south."
 
-Seamus is a man in Bow of the Ship. Seamus carries a knife. The description is "the cabin boy."
+Seamus is a man in Bow of the Ship. Seamus carries a knife. The description is "the cabin boy. His stomach is growling and he is clearly very hungry."
 
 Instead of giving bread to Seamus:
 	say "Seamus is pleased. He gives you the knife.";
@@ -113,7 +115,7 @@ Instead of giving bread to Seamus:
 
 [third puzzle- assembling and lowering dinghy boat into the water so that you can row away safely.]
 
-straps is scenery. It is in Port Deck. straps can be cut or uncut. 
+straps is scenery. It is in Port Deck. straps can be cut or uncut. The description is "straps that are holding the dinghy boat above the water. Maybe they can be cut with something sharp to drop it into the ocean."
 
 understand "cut [something] with [something]" as cutting it with. 
 cutting it with is an action applying to two things. 
@@ -127,7 +129,7 @@ Instead of cutting straps with knife:
 
 [player needs to find a knife to cut the rope so the dinghy boat falls into the water.]
 
-dinghy boat is a vehicle. It is in Port Deck. 
+dinghy boat is a vehicle. It is in Port Deck. The description is "a watercraft that you can possibly use to escape from the pirate ship."
 
 oarsattached is a number variable. oarsattached is 0.
 

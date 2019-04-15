@@ -11,9 +11,11 @@ You are a British sailor who is being held captive on a pirate ship. It is night
 
 Pirate Ship Escape
 An Interactive Fiction by ggrune20
-Release 1 / Serial number 190411 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190415 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Holding Cell
+The jail cell the pirates are keeping you hostage in. There is a tiny barred off window that allows you to see the full moon, the stars in the night sky, and the oil colored ocean. The floor is made out of wooden floorboards and the walls are wood as well. To the north there is an old and rusty jail door.
+
 You can see a Jail Door and loose floorboard here.
 
 &gt;</result>
@@ -2733,7 +2735,289 @@ You can see dinghy boat (empty) here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-3205"></child>
+            <child nodeId="node-3424"></child>
         </children>
+    </item>
+    <item nodeId="node-3424">
+        <command xml:space="preserve">pry open door with floorboard</command>
+        <result xml:space="preserve">you break open the jail door. North towards the cargo hold is the only way you can go.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3450"></child>
+            <child nodeId="node-3425"></child>
+        </children>
+    </item>
+    <item nodeId="node-3425">
+        <command xml:space="preserve">pry door with floorboard</command>
+        <result xml:space="preserve">you break open the jail door. North towards the cargo hold is the only way you can go.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3426"></child>
+        </children>
+    </item>
+    <item nodeId="node-3426">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door, eyepatch and pirate coat here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3427"></child>
+        </children>
+    </item>
+    <item nodeId="node-3427">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">(first taking eyepatch)
+You put on eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3428"></child>
+        </children>
+    </item>
+    <item nodeId="node-3428">
+        <command xml:space="preserve">put on coat</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3429"></child>
+        </children>
+    </item>
+    <item nodeId="node-3429">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3430"></child>
+        </children>
+    </item>
+    <item nodeId="node-3430">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">rope: Taken.
+hooking claw: Taken.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3431"></child>
+        </children>
+    </item>
+    <item nodeId="node-3431">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Cargo Hold
+You can see a Jail Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3432"></child>
+        </children>
+    </item>
+    <item nodeId="node-3432">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3433"></child>
+        </children>
+    </item>
+    <item nodeId="node-3433">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Captain's Quarters
+You can see bread here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3434"></child>
+        </children>
+    </item>
+    <item nodeId="node-3434">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3435"></child>
+        </children>
+    </item>
+    <item nodeId="node-3435">
+        <command xml:space="preserve">combine claw with rope</command>
+        <result xml:space="preserve">you now have a grappling hook.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3436"></child>
+        </children>
+    </item>
+    <item nodeId="node-3436">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You use the hook to climb up to the roof.
+
+roof
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3437"></child>
+        </children>
+    </item>
+    <item nodeId="node-3437">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You use the hook to climb down to the ground.
+
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3450">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Cargo Hold
+A room where there is pirate clothing and other cargo. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I wouldn't recommend going into the Crew's quarters... you don't look like a pirate at all. If you want to go up, there is a small ladder you can climb to the Center Deck.
+
+You can see a Jail Door, eyepatch and pirate coat here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3451"></child>
+        </children>
+    </item>
+    <item nodeId="node-3451">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">(first taking eyepatch)
+You put on eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3452"></child>
+        </children>
+    </item>
+    <item nodeId="node-3452">
+        <command xml:space="preserve">put on coat</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3453"></child>
+        </children>
+    </item>
+    <item nodeId="node-3453">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+This is the place where the pirates sleep at night and relax when they can. The Cargo Hold is to the south.
+
+You can see rope and hooking claw here.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3454"></child>
+        </children>
+    </item>
+    <item nodeId="node-3454">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">rope: Taken.
+hooking claw: Taken.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3455"></child>
+        </children>
+    </item>
+    <item nodeId="node-3455">
+        <command xml:space="preserve">combine claw with rope</command>
+        <result xml:space="preserve">you now have a grappling hook.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3456"></child>
+        </children>
+    </item>
+    <item nodeId="node-3456">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Cargo Hold
+A room where there is pirate clothing and other cargo. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I wouldn't recommend going into the Crew's quarters... you don't look like a pirate at all. If you want to go up, there is a small ladder you can climb to the Center Deck.
+
+You can see a Jail Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3457"></child>
+        </children>
+    </item>
+    <item nodeId="node-3457">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.
+
+You can see Entry here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3458"></child>
+        </children>
+    </item>
+    <item nodeId="node-3458">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">(first opening Entry)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3459"></child>
+        </children>
+    </item>
+    <item nodeId="node-3459">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">(first opening Entry)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3472"></child>
+        </children>
+    </item>
+    <item nodeId="node-3472">
+        <command xml:space="preserve">x wall</command>
+        <result xml:space="preserve">a wall that leads to the roof of the Captain's Quarters if you can manage to climb it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3473"></child>
+        </children>
+    </item>
+    <item nodeId="node-3473">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You use the grappling hook to scale down the wall.
+
+roof
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-3205">
         <command xml:space="preserve">pry door with floorboard</command>
@@ -2748,13 +3032,70 @@ You can see dinghy boat (empty) here.
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Cargo Hold
+A room wear there is pirate clothing and other cargo.
+
 You can see a Jail Door, eyepatch and pirate coat here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-3257"></child>
             <child nodeId="node-3207"></child>
+            <child nodeId="node-3443"></child>
         </children>
+    </item>
+    <item nodeId="node-3443">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3444"></child>
+        </children>
+    </item>
+    <item nodeId="node-3444">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Cargo Hold
+A room wear there is pirate clothing and other cargo.
+
+You can see a Jail Door, eyepatch and pirate coat here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3445"></child>
+        </children>
+    </item>
+    <item nodeId="node-3445">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">(first taking eyepatch)
+You put on eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3446"></child>
+        </children>
+    </item>
+    <item nodeId="node-3446">
+        <command xml:space="preserve">put on coat</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3447"></child>
+        </children>
+    </item>
+    <item nodeId="node-3447">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+You can see rope and hooking claw here.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-3207">
         <command xml:space="preserve">put on eyepatch</command>
