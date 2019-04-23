@@ -11252,7 +11252,8 @@ Object -> -> I134_pirate_coat ""
     with IK2_Count 8
     with IK2_Link I141_rope
     with KD_Count 2
-    with name 'pirate' 'coat' 'things//p' 
+    with name 'pirate' 'coat' 'things//p' 'vest' 'jacket' 
+    with parse_name Parse_Name_GV95
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_207
     with list_together BC_208
@@ -11453,7 +11454,7 @@ Object I143_grappling_hook ""
     with IK2_Link I146_wooden_oars
     with KD_Count 2
     with name 'grappling' 'hook' 'things//p' 'grapple' 
-    with parse_name Parse_Name_GV96
+    with parse_name Parse_Name_GV97
     with action_bitmap 0 0 0 0 0 0 
     with description BC_268
     with initial BC_269
@@ -11710,7 +11711,7 @@ Array Global_Vars -->
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
 Array tab_0_0 table $0664 0 (BC_333) (BC_334) (BC_335) (BC_336) (BC_337) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
-Array tab_0_2 table $2066 2 (Consult_Grammar_104) (Consult_Grammar_105) (Consult_Grammar_106) (Consult_Grammar_107) (Consult_Grammar_108) ;
+Array tab_0_2 table $2066 2 (Consult_Grammar_105) (Consult_Grammar_106) (Consult_Grammar_107) (Consult_Grammar_108) (Consult_Grammar_109) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4 ( TABLE_NOVALUE) ( TABLE_NOVALUE) (V27_amusing_a_victorious_pla) ( TABLE_NOVALUE) ( TABLE_NOVALUE) ;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
@@ -13025,7 +13026,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
     if ((((action ==##Go) &&  (actor==player) && ((noun == I59_up) && (true)) && (self=actor,true) && (((I138_center_deck == ContainerOf(player))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_808, 808);
-    ! [2: if player is carrying hook]
+    ! [2: if player is carrying grappling hook]
     if (((player == CarrierOf(I143_grappling_hook))))
     {! [3: say ~You use the hook to climb up to the roof.~]
         say__p=1;! [4: ~You use the hook to climb up to the roof.~]
@@ -13432,7 +13433,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ R_804 ;
     if (debug_rules) DB_Rule(R_804, 804);
     ! [2: if the player's command matches ~take all~]
-    if (((SnippetMatches(players_command, Consult_Grammar_109))))
+    if (((SnippetMatches(players_command, Consult_Grammar_110))))
     {! [3: end the story finally saying ~the Captain wakes up and recognizes you. You are taken captive and are unable to escape the ship. You Lose.~]
         deadflag=TX_L_113; story_complete=true;
         }
@@ -13443,7 +13444,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ R_819 ;
     if (debug_rules) DB_Rule(R_819, 819);
     ! [2: if the player's command matches ~take all~]
-    if (((SnippetMatches(players_command, Consult_Grammar_110))))
+    if (((SnippetMatches(players_command, Consult_Grammar_111))))
     {! [3: say ~C'mon now, you really thought it would be that easy?~]
         say__p=1;! [4: ~C'mon now, you really thought it would be that easy?~]
         ParaContent(); print "C'mon now, you really thought it would be that easy?"; new_line; .L_Say30; .L_SayX30;! [5: stop the action]
@@ -16333,17 +16334,17 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: if the player is the actor]
         if (((player == actor)))
         {! [4: if the player's command includes ~stand~]
-            if (((matched_text=SnippetIncludes(Consult_Grammar_111,players_command))))
+            if (((matched_text=SnippetIncludes(Consult_Grammar_112,players_command))))
             {! [5: say ~[regarding the noun][They're] not something [we] [can] stand on.~ ( a )]
                 say__p=1;! [6: ~[regarding the noun][They're] not something [we] [can] stand on.~ ( a )]
                 ParaContent(); print (TEXT_TY_Say) (TX_R_223); new_line; .L_Say137; .L_SayX137;} else {
                 ! [7: if the player's command includes ~sit~]
-                if (((matched_text=SnippetIncludes(Consult_Grammar_112,players_command))))
+                if (((matched_text=SnippetIncludes(Consult_Grammar_113,players_command))))
                 {! [8: say ~[regarding the noun][They're] not something [we] [can] sit down on.~ ( b )]
                     say__p=1;! [9: ~[regarding the noun][They're] not something [we] [can] sit down on.~ ( b )]
                     ParaContent(); print (TEXT_TY_Say) (TX_R_224); new_line; .L_Say138; .L_SayX138;} else {
                     ! [10: if the player's command includes ~lie~]
-                    if (((matched_text=SnippetIncludes(Consult_Grammar_113,players_command))))
+                    if (((matched_text=SnippetIncludes(Consult_Grammar_114,players_command))))
                     {! [11: say ~[regarding the noun][They're] not something [we] [can] lie down on.~ ( c )]
                         say__p=1;! [12: ~[regarding the noun][They're] not something [we] [can] lie down on.~ ( c )]
                         ParaContent(); print (TEXT_TY_Say) (TX_R_225); new_line; .L_Say139; .L_SayX139;} else {
@@ -49711,7 +49712,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Parse_Name_GV96 
+[ Parse_Name_GV95 
     original_wn ! first word of text parsed
     group_wn ! first word matched against A/B/C/... disjunction
     try_from_wn ! position to try matching from
@@ -49765,7 +49766,61 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Consult_Grammar_104 
+[ Parse_Name_GV97 
+    original_wn ! first word of text parsed
+    group_wn ! first word matched against A/B/C/... disjunction
+    try_from_wn ! position to try matching from
+    n ! number of words matched
+    f ! flag: sufficiently good match found to justify success
+    w ! for use by individual grammar lines
+    rv ! for use by individual grammar lines
+    g ! temporary: success flag for parsing visibles
+    ss ! temporary: saves 'self' in distinguishing visibles
+    spn ! temporary: saves 'parsed_number' in parsing visibles
+    pass ! pass counter (1 to 3)
+    pass1_n ! value of n recorded during pass 1
+    pass2_n ! value of n recorded during pass 2
+    ;
+    #ifdef DEBUG;
+    if (parser_trace >= 3) print "Parse_name called^";
+    #endif;
+    if (parser_action == ##TheSame) return 0;
+    original_wn = wn;
+    for (pass = 1: pass <= 3: pass++) {
+        wn = original_wn;
+        try_from_wn = wn; f = false; n = 0;
+        while (true) {
+            ! On pass 1 only, advance wn past name property words
+            ! (but do not do this for ##TheSame, when wn is undefined)
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            if (pass == 1 or 2) {
+            }
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            break;
+        } ! End of endless loop
+        while (WordInProperty(NextWordStopped(), self, name)) n++;
+        if ((f) || (n>0)) n = n + try_from_wn - original_wn;
+        if (pass == 1) pass1_n = n;
+        if (pass == 2) pass2_n = n;
+    } ! End of pass loop
+    #ifdef DEBUG;
+    if (parser_trace >= 3)
+        print "Pass 1: ", pass1_n, " Pass 2: ", pass2_n, " Pass 3: ", n, "^";
+    #endif;
+    if (pass1_n > n) n = pass1_n;
+    if (pass2_n > n) n = pass2_n;
+    wn = original_wn + n;
+    if (n == 0) return -1;
+    DetectPluralWord(original_wn, n);
+    return n;
+];
+[ Consult_Grammar_105 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49785,7 +49840,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_105 
+[ Consult_Grammar_106 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49805,7 +49860,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_106 
+[ Consult_Grammar_107 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49825,7 +49880,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_107 
+[ Consult_Grammar_108 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49845,26 +49900,6 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_108 
-    range_from ! call parameter: word number of snippet start
-
-    range_words ! call parameter: snippet length
-
-    original_wn ! first word of text parsed
-
-    group_wn ! first word matched against A/B/C/... disjunction
-
-    w ! for use by individual grammar lines
-
-    rv ! for use by individual grammar lines
-
-    ;
-    wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
-        if (NextWordStopped() ~= 'undo') jump Fail_1;
-        if ((range_words==0) || (wn-range_from==range_words)) return rv;
-        .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
-    return GPR_FAIL;
-];
 [ Consult_Grammar_109 
     range_from ! call parameter: word number of snippet start
 
@@ -49880,8 +49915,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
 
     ;
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
-        if (NextWordStopped() ~= 'take') jump Fail_1;
-        if (NextWordStopped() ~= 'all') jump Fail_1;
+        if (NextWordStopped() ~= 'undo') jump Fail_1;
         if ((range_words==0) || (wn-range_from==range_words)) return rv;
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
@@ -49922,7 +49956,8 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
 
     ;
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
-        if (NextWordStopped() ~= 'stand') jump Fail_1;
+        if (NextWordStopped() ~= 'take') jump Fail_1;
+        if (NextWordStopped() ~= 'all') jump Fail_1;
         if ((range_words==0) || (wn-range_from==range_words)) return rv;
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
@@ -49942,12 +49977,32 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
 
     ;
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
-        if (NextWordStopped() ~= 'sit') jump Fail_1;
+        if (NextWordStopped() ~= 'stand') jump Fail_1;
         if ((range_words==0) || (wn-range_from==range_words)) return rv;
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
 [ Consult_Grammar_113 
+    range_from ! call parameter: word number of snippet start
+
+    range_words ! call parameter: snippet length
+
+    original_wn ! first word of text parsed
+
+    group_wn ! first word matched against A/B/C/... disjunction
+
+    w ! for use by individual grammar lines
+
+    rv ! for use by individual grammar lines
+
+    ;
+    wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
+        if (NextWordStopped() ~= 'sit') jump Fail_1;
+        if ((range_words==0) || (wn-range_from==range_words)) return rv;
+        .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
+    return GPR_FAIL;
+];
+[ Consult_Grammar_114 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -50349,7 +50404,7 @@ Array TX_L_110 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_110;
 Constant TX_PS_44 = "A room where there is a lot of boxes and baggage here. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I would not recommend going into the Crew's quarters... you do not look like a pirate at all. If you want to go up, there is an opening that leads to the Center Deck which is above you.";
 Constant TX_PS_94 = "A watercraft that you can possibly use to escape from the pirate ship. However, there are two issues. First, there aren't any oars connected to the boat and you won't get far if you can't row. Second, there are leather straps holding the boat above the water, and the only way to release the straps is by cutting them.";
 Constant TX_PS_3 = "An Interactive Fiction";
-Constant TX_PS_74 = "As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.";
+Constant TX_PS_74 = "As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall, it leads to the roof of the Captain's Quarters. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.";
 Constant TX_PS_49 = "Baggage";
 Constant TX_PS_96 = "Bow of the Ship";
 Constant TX_PS_47 = "Boxes";
@@ -50387,7 +50442,7 @@ Constant TX_PS_89 = "The Center deck is to the east.";
 Constant TX_PS_97 = "The Center deck is to the south.";
 Constant TX_PS_84 = "The Center deck is to the west.";
 Constant TX_PS_35 = "The jail cell the pirates are keeping you hostage in. There is a tiny barred off window that allows you to see the full moon, the stars in the night sky, and the oil colored ocean. The floor is made out of wooden floorboards and the walls are wood as well. To the north there is an old and rusty jail door.";
-Constant TX_PS_67 = "The place where the Captain lives when he is not on the deck bossing his crew around. He is in a deep sleep, do not wake him up.";
+Constant TX_PS_67 = "The place where the Captain lives when he is not on the deck bossing his crew around. He is in a deep sleep, do not wake him up. You see the bread that you smelled earlier.";
 Constant TX_PS_59 = "This is the place where the pirates sleep at night and relax when they can. The Cargo Hold is to the south. On the ground in front of you there is some rope and a hooking claw.";
 Constant TX_PS_109 = "UNDO the last command";
 Constant TX_PS_77 = "Wall";

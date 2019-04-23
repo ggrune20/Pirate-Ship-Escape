@@ -7493,11 +7493,12 @@ You can see dinghy boat (empty) here.
     </item>
     <item nodeId="node-1717">
         <command xml:space="preserve">break off floorboard</command>
-        <result xml:space="preserve">you manage to break off the loose floorboard. Maybe it can help you to get out of the holding cell.
+        <result xml:space="preserve">You manage to break off the loose floorboard. Maybe it can help you to get out of the holding cell.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1728"></child>
+        <children><child nodeId="node-1744"></child>
+            <child nodeId="node-1728"></child>
         </children>
     </item>
     <item nodeId="node-1728">
@@ -7506,6 +7507,461 @@ You can see dinghy boat (empty) here.
 you break open the jail door. North towards the cargo hold is the only way you can go.
 
 &gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1744">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first opening the Jail Door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1745"></child>
+        </children>
+    </item>
+    <item nodeId="node-1745">
+        <command xml:space="preserve">pry open door with floorboard</command>
+        <result xml:space="preserve">you break open the jail door. North towards the cargo hold is the only way you can go.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1746"></child>
+        </children>
+    </item>
+    <item nodeId="node-1746">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Cargo Hold
+A room where there is a lot of boxes and baggage here. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I would not recommend going into the Crew's quarters... you do not look like a pirate at all. If you want to go up, there is an opening that leads to the Center Deck which is above you.
+
+You can see a Jail Door and Wooden Chest (in which are eyepatch and pirate coat) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1747"></child>
+        </children>
+    </item>
+    <item nodeId="node-1747">
+        <command xml:space="preserve">put on eyepatch</command>
+        <result xml:space="preserve">(first taking eyepatch)
+You put on eyepatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1748"></child>
+        </children>
+    </item>
+    <item nodeId="node-1748">
+        <command xml:space="preserve">put on pirate coat</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1749"></child>
+        </children>
+    </item>
+    <item nodeId="node-1749">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Crew's Quarters
+This is the place where the pirates sleep at night and relax when they can. The Cargo Hold is to the south. On the ground in front of you there is some rope and a hooking claw.
+
+You can see rope and hooking claw here.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1750"></child>
+        </children>
+    </item>
+    <item nodeId="node-1750">
+        <command xml:space="preserve">take hooking claw and rope</command>
+        <result xml:space="preserve">hooking claw: Taken.
+rope: Taken.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1751"></child>
+        </children>
+    </item>
+    <item nodeId="node-1751">
+        <command xml:space="preserve">combine hooking claw with rope</command>
+        <result xml:space="preserve">you now have a grappling hook.
+
+you were able to sneak into the Crew's Quarters unnoticed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1752"></child>
+        </children>
+    </item>
+    <item nodeId="node-1752">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Cargo Hold
+A room where there is a lot of boxes and baggage here. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I would not recommend going into the Crew's quarters... you do not look like a pirate at all. If you want to go up, there is an opening that leads to the Center Deck which is above you.
+
+You can see a Jail Door and Wooden Chest (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1753"></child>
+        </children>
+    </item>
+    <item nodeId="node-1753">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Center Deck
+As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.
+
+You can see Entry here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1754"></child>
+        </children>
+    </item>
+    <item nodeId="node-1754">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Bow of the Ship
+The Center deck is to the south.
+
+You can see Seamus here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1755"></child>
+        </children>
+    </item>
+    <item nodeId="node-1755">
+        <command xml:space="preserve">x seamus</command>
+        <result xml:space="preserve">the cabin boy. His stomach is growling and he is clearly very hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1756"></child>
+        </children>
+    </item>
+    <item nodeId="node-1756">
+        <command xml:space="preserve">talk to seamus</command>
+        <result xml:space="preserve">"Hi there. How are you?" you say confidently. 
+
+"Not too good. I'm really hungry." he complains. 
+
+"Are you looking for some food?" you inquire. 
+
+"I'm starving mate. If you have any food, I'd be willing to trade you my knife for it."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1757"></child>
+        </children>
+    </item>
+    <item nodeId="node-1757">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Center Deck
+As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.
+
+You can see Entry here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1758"></child>
+        </children>
+    </item>
+    <item nodeId="node-1758">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">(first opening Entry)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1759"></child>
+        </children>
+    </item>
+    <item nodeId="node-1759">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You throw the grappling claw and it hooks onto the roof. You climb the rope.
+
+roof
+You are now above the Captain's Quarters and there is an open hatch that you can go down. From up here you can also scale down to get back down down to the Center Deck.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1760"></child>
+        </children>
+    </item>
+    <item nodeId="node-1760">
+        <command xml:space="preserve">drop grappling hook</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1761"></child>
+        </children>
+    </item>
+    <item nodeId="node-1761">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1762"></child>
+        </children>
+    </item>
+    <item nodeId="node-1762">
+        <command xml:space="preserve">take hook</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1763"></child>
+        </children>
+    </item>
+    <item nodeId="node-1763">
+        <command xml:space="preserve">use grappling hook</command>
+        <result xml:space="preserve">You use the hook to scale the wall down to the ground.
+
+Center Deck
+As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.
+
+You can see Entry here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1764"></child>
+        </children>
+    </item>
+    <item nodeId="node-1764">
+        <command xml:space="preserve">drop hook</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1765"></child>
+        </children>
+    </item>
+    <item nodeId="node-1765">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">I need something to help me scale this wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1766"></child>
+        </children>
+    </item>
+    <item nodeId="node-1766">
+        <command xml:space="preserve">take hook</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1767"></child>
+        </children>
+    </item>
+    <item nodeId="node-1767">
+        <command xml:space="preserve">climb wall</command>
+        <result xml:space="preserve">You throw the grappling claw and it hooks onto the roof. You climb the rope.
+
+roof
+You are now above the Captain's Quarters and there is an open hatch that you can go down. From up here you can also scale down to get back down down to the Center Deck.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1768"></child>
+        </children>
+    </item>
+    <item nodeId="node-1768">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Captain's Quarters
+The place where the Captain lives when he is not on the deck bossing his crew around. He is in a deep sleep, do not wake him up.
+
+You can see Entry and bread here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1769"></child>
+        </children>
+    </item>
+    <item nodeId="node-1769">
+        <command xml:space="preserve">take bread</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1770"></child>
+        </children>
+    </item>
+    <item nodeId="node-1770">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+roof
+You are now above the Captain's Quarters and there is an open hatch that you can go down. From up here you can also scale down to get back down down to the Center Deck.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1771"></child>
+        </children>
+    </item>
+    <item nodeId="node-1771">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You use the hook to scale the wall down to the ground.
+
+Center Deck
+As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.
+
+You can see Entry here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1772"></child>
+        </children>
+    </item>
+    <item nodeId="node-1772">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Bow of the Ship
+The Center deck is to the south.
+
+You can see Seamus here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1773"></child>
+        </children>
+    </item>
+    <item nodeId="node-1773">
+        <command xml:space="preserve">give seamus bread</command>
+        <result xml:space="preserve">Seamus is pleased. He gives you the knife.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1774"></child>
+        </children>
+    </item>
+    <item nodeId="node-1774">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Center Deck
+As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.
+
+You can see Entry here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1775"></child>
+        </children>
+    </item>
+    <item nodeId="node-1775">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Starboard Deck
+The Center deck is to the west.
+
+You can see wooden oars here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1776"></child>
+        </children>
+    </item>
+    <item nodeId="node-1776">
+        <command xml:space="preserve">take oars</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1777"></child>
+        </children>
+    </item>
+    <item nodeId="node-1777">
+        <command xml:space="preserve">fix oars to boat</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1778"></child>
+        </children>
+    </item>
+    <item nodeId="node-1778">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Center Deck
+As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you.
+
+You can see Entry here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1779"></child>
+        </children>
+    </item>
+    <item nodeId="node-1779">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Port Deck
+The Center deck is to the east.
+
+You can see dinghy boat (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1780"></child>
+        </children>
+    </item>
+    <item nodeId="node-1780">
+        <command xml:space="preserve">fix wooden oars to boat</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1781"></child>
+        </children>
+    </item>
+    <item nodeId="node-1781">
+        <command xml:space="preserve">secure oars to boat</command>
+        <result xml:space="preserve">you attach the wooden oars to the dinghy boat
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1782"></child>
+        </children>
+    </item>
+    <item nodeId="node-1782">
+        <command xml:space="preserve">cut straps</command>
+        <result xml:space="preserve">Cutting it up would achieve little.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1783"></child>
+        </children>
+    </item>
+    <item nodeId="node-1783">
+        <command xml:space="preserve">cut straps with knife</command>
+        <result xml:space="preserve">the boat drops down into the water. Jump in the dinghy boat before it floats away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1784"></child>
+        </children>
+    </item>
+    <item nodeId="node-1784">
+        <command xml:space="preserve">jump in dinghy boat</command>
+        <result xml:space="preserve">Now that the oars are attached to the dinghy boat. Try lowering it into the ocean.
+
+
+
+    *** You jump off the edge of the ship and land hardly in the boat. You escaped the pirate ship! You win! ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1718">

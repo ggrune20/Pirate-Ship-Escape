@@ -58,6 +58,10 @@ eyepatch is an object. It is in Wooden Chest. It is wearable. The description is
 
 pirate coat is an object. It is in Wooden Chest. It is wearable. The description is "an item of pirate clothing. A coat you usually wear over a shirt."
 
+understand "vest" as pirate coat. 
+
+understand "jacket" as pirate coat. 
+
 Crew's Quarters is a room. It is north of Cargo Hold. "This is the place where the pirates sleep at night and relax when they can. The Cargo Hold is to the south. On the ground in front of you there is some rope and a hooking claw."
 
 An every turn rule:
@@ -72,7 +76,7 @@ An every turn rule:
 
 [player needs to wear pirate clothing to get into crew's quarters]
 
-Captain's Quarters is a room. The description is "The place where the Captain lives when he is not on the deck bossing his crew around. He is in a deep sleep, do not wake him up."
+Captain's Quarters is a room. The description is "The place where the Captain lives when he is not on the deck bossing his crew around. He is in a deep sleep, do not wake him up. You see the bread that you smelled earlier."
 
 After reading a command:
 	If the player's command matches "take all":
@@ -121,7 +125,7 @@ Instead of using grappling hook:
 		say "Try using the grappling in a place where it can help you to get up somewhere."
 
 Instead of going up when player is in Center Deck:
-	if player is carrying hook:
+	if player is carrying grappling hook:
 		say "You use the hook to climb up to the roof.";
 		move player to roof;
 	otherwise:
@@ -140,15 +144,8 @@ Instead of climbing wall when player is in Center Deck:
 		move player to roof;
 	otherwise:
 		say "I need something to help me scale this wall.".
-		
-[Understand "scale down [something]" as scaling. Scaling is an action applying to one thing. 
 
-Instead of scaling when player is in roof: 
-	If the player carries the grappling hook:
-		say "You use the grappling hook to scale down the wall.";
-		move player to Center Deck.]
-
-Center Deck is a room. It is above Cargo Hold. The description is "As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you."
+Center Deck is a room. It is above Cargo Hold. The description is "As you stand in the center deck you catch the scent of bread coming from the south, the Captain's Quarters. The entry door leads to the Captain's Quarters. Off to the side of the entry you see a wall, it leads to the roof of the Captain's Quarters. The Starboard Deck is to the east, the Port Deck is to the West, the bow is to the north, and the Cargo Hold is below you."
 
 Starboard Deck is a room. It is east of Center Deck. The description is "The Center deck is to the west."
 
@@ -233,5 +230,7 @@ After reading a command:
 	If the player's command matches "take all":
 		say "C'mon now, you really thought it would be that easy?";
 		stop the action. 
+		
+[Shortest Route to win: take loose floorboard, pry open jail door with loose floorboard, north, put on eyepatch, put on pirate coat, north, take rope and hooking claw, combine rope with hooking claw, south, up, climb wall, down, take bread, up, down, north, give bread to Seamus, south, east, take wooden oars, west, west again, connect wooden oars to dinghy boat, cut straps with knife, jump in dinghy boat, WIN]
 
 
