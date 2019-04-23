@@ -1662,11 +1662,12 @@ Crew's Quarters
     </item>
     <item nodeId="node-1155">
         <command xml:space="preserve">pry open door with floorboard</command>
-        <result xml:space="preserve">You can't see any such thing.
+        <result xml:space="preserve">you break open the jail door. North towards the cargo hold is the only way you can go.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1156"></child>
+        <children><child nodeId="node-1787"></child>
+            <child nodeId="node-1156"></child>
         </children>
     </item>
     <item nodeId="node-1156">
@@ -1798,6 +1799,27 @@ You can see dinghy boat (empty) here.
     <item nodeId="node-1169">
         <command xml:space="preserve">attach oars to boat</command>
         <result xml:space="preserve">You would achieve nothing by this.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1787">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Cargo Hold
+A room where there is a lot of boxes and baggage here. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I would not recommend going into the Crew's quarters... you do not look like a pirate at all. If you want to go up, there is an opening that leads to the Center Deck which is above you.
+
+You can see a Jail Door and Wooden Chest (in which are eyepatch and pirate coat) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1788"></child>
+        </children>
+    </item>
+    <item nodeId="node-1788">
+        <command xml:space="preserve">put on vest</command>
+        <result xml:space="preserve">(first taking pirate coat)
+You put on pirate coat.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

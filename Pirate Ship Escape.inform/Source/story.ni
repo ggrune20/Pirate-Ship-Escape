@@ -98,6 +98,8 @@ Understand "combine [something] and [something]" as combining it with.
 
 grappling hook is an object.
 
+[took the idea and code of the grappling hook from Assasin. Altered it a little bit]
+
 understand "grapple" as grappling hook. 
 
 Instead of combining rope with hooking claw:
@@ -109,6 +111,8 @@ Instead of combining hooking claw with rope:
 	move grappling hook to player.
 
 wall is scenery in Center Deck. The description is "a wall that leads to the roof of the Captain's Quarters. You can maybe climb it with the help of a tool."
+
+[player needs to use the grappling hook and climb the wall in order to enter the Captain's Quarters]
 
 Understand "climb up [something]" as up. 
 
@@ -159,6 +163,8 @@ Seamus is a man in Bow of the Ship. Seamus carries a knife. The description is "
 
 Talking to is an action applying to one visible thing. Understand "talk to [someone]" or “converse with [someone]” as talking to.
 
+[took talking and quizzing from Inform7 Handbook]
+
 Instead of talking to Seamus:
 	say "'Hi there. How are you?' you say confidently.
 	[paragraph break]'Not too good. I'm really hungry.' he complains.
@@ -178,6 +184,8 @@ Instead of quizzing Seamus about food:
 Instead of giving bread to Seamus:
 	say "Seamus is pleased. He gives you the knife.";
 	now player carries knife. 
+	
+[Player needs Seamus' knife in order to drop the dinghy boat into the water]
 
 [third puzzle- assembling and lowering dinghy boat into the water so that you can row away safely.]
 
