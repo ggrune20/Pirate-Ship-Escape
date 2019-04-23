@@ -7,17 +7,21 @@ The description of the player is "You are tall and skinny but also strong and de
 
 Holding Cell is a room. The description is "The jail cell the pirates are keeping you hostage in. There is a tiny barred off window that allows you to see the full moon, the stars in the night sky, and the oil colored ocean. The floor is made out of wooden floorboards and the walls are wood as well. To the north there is an old and rusty jail door." 
 
+Window is scenery in Holding Cell. The description is "Just a very small window that is barred off with metal bars."
+
 [first puzzle- breaking out of jail cell]
 
 The Jail Door is north of Holding Cell and south of Cargo Hold. The Jail Door is a door. The Jail door is lockable and locked. The description is "A door with metal bars keeping you caged in the holding cell. This is your only way out. It is old and rusty from the ocean's salt water. It is very weak and could possibly be pried open."
 
 [a section of the jail door is rusty and loose. you need to pry it open.]
 
-loose floorboard is an object. It is in Holding Cell. The description is "a two by four plank of hard and very sturdy wood."
+loose floorboard is an object. It is in Holding Cell. The description is "a two by four plank of hard and very sturdy wood. It is very loose and maybe you could break it off."
 
 understand "plank of wood" as loose floorboard.
 
 Understand "break off [something]" as breaking. Breaking is an action applying to one thing. 
+
+Understand "break [something] off" as breaking.
 
 Instead of breaking loose floorboard:
 	say "You manage to break off the loose floorboard. Maybe it can help you to get out of the holding cell.";
@@ -33,6 +37,8 @@ Understand "pry [something] with [something]" as prying it with. prying it with 
 
 Understand "pry open [something] with [something]" as prying it with. 
 
+Understand "break open [something] with [something]" as prying it with.
+
 Instead of prying the jail door with floorboard:
 	If the player has loose floorboard:
 		say "you break open the jail door. North towards the cargo hold is the only way you can go.";
@@ -40,7 +46,11 @@ Instead of prying the jail door with floorboard:
 	otherwise:
 		say "you are going to need something to help you to pry open the jail door.".
 
-Cargo Hold is a room. The description is "A room where there is pirate clothing and other cargo. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I would not recommend going into the Crew's quarters... you do not look like a pirate at all. If you want to go up, there is an opening that leads to the Center Deck which is above you."
+Cargo Hold is a room. The description is "A room where there is a lot of boxes and baggage here. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I would not recommend going into the Crew's quarters... you do not look like a pirate at all. If you want to go up, there is an opening that leads to the Center Deck which is above you."
+
+boxes is scenery in Cargo Hold. The description is "It's just crates. Nothing is special or important about them."
+
+baggage is scenery in Cargo Hold. The description is "It's just crates. Nothing is special or important about them."
 
 Wooden Chest is a container. It is in Cargo Hold. The description is "A large strong box that probably contains clothes and other pirate items."
 
@@ -63,6 +73,10 @@ An every turn rule:
 [player needs to wear pirate clothing to get into crew's quarters]
 
 Captain's Quarters is a room. The description is "The place where the Captain lives when he is not on the deck bossing his crew around. He is in a deep sleep, do not wake him up."
+
+After reading a command:
+	If the player's command matches "take all":
+		End the story finally saying "the Captain wakes up and recognizes you. You are taken captive and are unable to escape the ship. You Lose."
 
 Entry is north of Captain's Quarters and south of Center Deck. Entry is a door. Entry is lockable and locked. The description is "A large wooden door with intricate designs of skulls and crossbones. It is locked shut. There must be another way to get into the Captain's Quarters."
 
@@ -90,12 +104,21 @@ Instead of combining hooking claw with rope:
 	say "you now have a grappling hook.";
 	move grappling hook to player.
 
-wall is scenery in Center Deck. The description is "a wall that leads to the roof of the Captain's Quarters if you can manage to climb it."
+wall is scenery in Center Deck. The description is "a wall that leads to the roof of the Captain's Quarters. You can maybe climb it with the help of a tool."
 
 Understand "climb up [something]" as up. 
 
-[Instead of using grappling hook: 
-	In]
+Understand "use [something]" as using. Using is an action applying to one thing. 
+
+Instead of using grappling hook: 
+	if player is in Center Deck:
+		say "You use the hook to climb up to the roof.";
+		move player to roof;
+	if player is in roof:
+		say "You use the hook to scale the wall down to the ground.";
+		move player to Center Deck;
+	Otherwise:
+		say "Try using the grappling in a place where it can help you to get up somewhere."
 
 Instead of going up when player is in Center Deck:
 	if player is carrying hook:

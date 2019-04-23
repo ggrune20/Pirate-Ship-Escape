@@ -40,7 +40,25 @@ You can see a Jail Door and loose floorboard here.
             <child nodeId="node-1031"></child>
             <child nodeId="node-1028"></child>
             <child nodeId="node-1003"></child>
+            <child nodeId="node-1739"></child>
         </children>
+    </item>
+    <item nodeId="node-1739">
+        <command xml:space="preserve">x window</command>
+        <result xml:space="preserve">Just a very small window that is barred off with metal bars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1740"></child>
+        </children>
+    </item>
+    <item nodeId="node-1740">
+        <command xml:space="preserve">x floorboards</command>
+        <result xml:space="preserve">(loose floorboard)
+a two by four plank of hard and very sturdy wood.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1003">
         <command xml:space="preserve">x me</command>
@@ -1629,11 +1647,12 @@ Crew's Quarters
     </item>
     <item nodeId="node-1154">
         <command xml:space="preserve">take floorboard</command>
-        <result xml:space="preserve">Taken.
+        <result xml:space="preserve">You manage to break off the loose floorboard. Maybe it can help you to get out of the holding cell.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1346"></child>
+        <children><child nodeId="node-1742"></child>
+            <child nodeId="node-1346"></child>
             <child nodeId="node-1341"></child>
             <child nodeId="node-1325"></child>
             <child nodeId="node-1198"></child>
@@ -3913,6 +3932,13 @@ You can see dinghy boat (empty) here.
     <item nodeId="node-1390">
         <command xml:space="preserve">jump in boat</command>
         <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1742">
+        <command xml:space="preserve">break open jail door with floorboard</command>
+        <result xml:space="preserve">you break open the jail door. North towards the cargo hold is the only way you can go.
+
+&gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1391">
