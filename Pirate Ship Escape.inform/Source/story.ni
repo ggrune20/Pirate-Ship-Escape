@@ -15,14 +15,16 @@ The Jail Door is north of Holding Cell and south of Cargo Hold. The Jail Door is
 
 loose floorboard is an object. It is in Holding Cell. The description is "a two by four plank of hard and very sturdy wood."
 
+understand "plank of wood" as loose floorboard.
+
 Understand "break off [something]" as breaking. Breaking is an action applying to one thing. 
 
 Instead of breaking loose floorboard:
-	say "you manage to break off the loose floorboard. Maybe it can help you to get out of the holding cell.";
+	say "You manage to break off the loose floorboard. Maybe it can help you to get out of the holding cell.";
 	move loose floorboard to player.
 	
 Instead of taking loose floorboard:
-	say "you manage to break off the loose floorboard. Maybe it can help you to get out of the holding cell.";
+	say "You manage to break off the loose floorboard. Maybe it can help you to get out of the holding cell.";
 	move loose floorboard to player.
 
 [you need to break off the loose floorboard]
@@ -38,13 +40,15 @@ Instead of prying the jail door with floorboard:
 	otherwise:
 		say "you are going to need something to help you to pry open the jail door.".
 
-Cargo Hold is a room. The description is "A room where there is pirate clothing and other cargo. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I wouldn't recommend going into the Crew's quarters... you don't look like a pirate at all. If you want to go up, there is a small ladder you can climb to the Center Deck."
+Cargo Hold is a room. The description is "A room where there is pirate clothing and other cargo. The Holding Cell is to the south and the Crew's Quarters are to the north. Be careful though, I would not recommend going into the Crew's quarters... you do not look like a pirate at all. If you want to go up, there is an opening that leads to the Center Deck which is above you."
 
-eyepatch is an object. It is in Cargo Hold. It is wearable. The description is "a small patch of leather and string meant to be worn in front of the eye."
+Wooden Chest is a container. It is in Cargo Hold. The description is "A large strong box that probably contains clothes and other pirate items."
 
-pirate coat is an object. It is in Cargo Hold. It is wearable. The description is "an item of pirate clothing. A coat you usually wear over a shirt."
+eyepatch is an object. It is in Wooden Chest. It is wearable. The description is "a small patch of leather and string meant to be worn in front of the eye."
 
-Crew's Quarters is a room. It is north of Cargo Hold. "This is the place where the pirates sleep at night and relax when they can. The Cargo Hold is to the south."
+pirate coat is an object. It is in Wooden Chest. It is wearable. The description is "an item of pirate clothing. A coat you usually wear over a shirt."
+
+Crew's Quarters is a room. It is north of Cargo Hold. "This is the place where the pirates sleep at night and relax when they can. The Cargo Hold is to the south. On the ground in front of you there is some rope and a hooking claw."
 
 An every turn rule:
 	If player is in Crew's Quarters:
@@ -58,11 +62,11 @@ An every turn rule:
 
 [player needs to wear pirate clothing to get into crew's quarters]
 
-Captain's Quarters is a room. The description is "The place where the Captain lives when he is not on the deck bossing his crew around."
+Captain's Quarters is a room. The description is "The place where the Captain lives when he is not on the deck bossing his crew around. He is in a deep sleep, do not wake him up."
 
 Entry is north of Captain's Quarters and south of Center Deck. Entry is a door. Entry is lockable and locked. The description is "A large wooden door with intricate designs of skulls and crossbones. It is locked shut. There must be another way to get into the Captain's Quarters."
 
-bread is an object. It is in Captain's Quarters. The description is "great food for when you are hungry."
+bread is an object. It is in Captain's Quarters. The description is "Great food for when you are hungry."
 
 roof is a room. It is above Captain's Quarters. The description is "You are now above the Captain's Quarters and there is an open hatch that you can go down. From up here you can also scale down to get back down down to the Center Deck."
 
@@ -75,6 +79,8 @@ Understand "combine [something] with [something]" as combining it with. Combinin
 Understand "combine [something] and [something]" as combining it with. 
 
 grappling hook is an object.
+
+understand "grapple" as grappling hook. 
 
 Instead of combining rope with hooking claw:
 	say "you now have a grappling hook.";
@@ -123,7 +129,7 @@ Center Deck is a room. It is above Cargo Hold. The description is "As you stand 
 
 Starboard Deck is a room. It is east of Center Deck. The description is "The Center deck is to the west."
 
-wooden oars is an object. It is in Starboard Deck. The description is "oars that can be attached to a boat."
+wooden oars is an object. It is in Starboard Deck. The description is "oars that can be connected to a dinghy boat."
 
 Port Deck is a room. It is west of Center Deck. The description is "The Center deck is to the east."
 
@@ -141,14 +147,13 @@ Instead of talking to Seamus:
 
 food is a thing.
 
-Quizzing it about is an action applying to one thing and one visible thing. Understand "ask
-[someone] about [any thing]" and "quiz [someone] about [any thing]" as quizzing it about.
+Quizzing it about is an action applying to one thing and one visible thing. Understand "ask [someone] about [any thing]" and "quiz [someone] about [any thing]" as quizzing it about.
 
 Instead of quizzing Seamus about knife:
 	say "'This knife can cut anything lad, a rope, a strap, you name it.' says Seamus."
 	
 Instead of quizzing Seamus about food:
-	say "'The Captain barely feeds us. I know he has food in his quarters but I'm not allowed in there. I'm just the cabin boy.' Seamus responds."
+	say "'The Captain barely feeds us, but I know there is some food in his Quarters. Give me some food and I'll definitely give you my knife, mate."
 
 Instead of giving bread to Seamus:
 	say "Seamus is pleased. He gives you the knife.";
@@ -156,10 +161,12 @@ Instead of giving bread to Seamus:
 
 [third puzzle- assembling and lowering dinghy boat into the water so that you can row away safely.]
 
-straps is scenery. It is in Port Deck. straps can be cut or uncut. The description is "straps that are holding the dinghy boat above the water. Maybe they can be cut with something sharp to drop the dinghy boat into the ocean."
+straps is scenery. It is in Port Deck. straps can be cut or uncut. The description is "Straps that are holding the dinghy boat above the water. Maybe they can be cut with something sharp to drop the dinghy boat into the ocean."
 
 understand "cut [something] with [something]" as cutting it with. 
 cutting it with is an action applying to two things. 
+
+understand "slash [something] with [something]" as cutting it with. 
 
 Instead of cutting straps with knife:
 	If oarsattached is 1:
@@ -170,11 +177,15 @@ Instead of cutting straps with knife:
 
 [player needs to find a knife to cut the rope so the dinghy boat falls into the water.]
 
-dinghy boat is a vehicle. It is in Port Deck. The description is "a watercraft that you can possibly use to escape from the pirate ship. The only issue is there are leather straps holding the boat above the water. The only way to release the straps is by cutting them."
+dinghy boat is a vehicle. It is in Port Deck. The description is "A watercraft that you can possibly use to escape from the pirate ship. However, there are two issues. First, there aren't any oars connected to the boat and you won't get far if you can't row. Second, there are leather straps holding the boat above the water, and the only way to release the straps is by cutting them."
 
 oarsattached is a number variable. oarsattached is 0.
 
 understand "connect [something] to [something]" as connecting it to. connecting it to is an action applying to two things.
+
+understand "fasten [something] to [something]" as connecting it to.
+
+understand "secure [something] to [something]" as connecting it to.
 
 Instead of connecting wooden oars to dinghy boat:
 	say "you attach the wooden oars to the dinghy boat";
